@@ -6,13 +6,14 @@ public class CreatureOxygen : MonoBehaviour
     public Action OnDepleted;
     public Action<float> OnChanged;
     private float changeRatePerSecondDefualt = -0.5f;
-    public float ChangeRatePerSecond;
+    public float changeRatePerSecond;
     public float MaxLevels = 50;
-    private float levels;
+    [SerializeField] private float levels;
     public float Levels
     {
         get { return levels; }
-        set {
+        set
+        {
             if (value < 0)
             {
                 value = 0;
@@ -22,9 +23,9 @@ public class CreatureOxygen : MonoBehaviour
             {
                 value = MaxLevels;
             }
-            
-            if (value != levels) 
-            { 
+
+            if (value != levels)
+            {
                 OnChanged?.Invoke(value);
                 levels = value;
             }
@@ -33,7 +34,7 @@ public class CreatureOxygen : MonoBehaviour
 
     public void SetChangeRateToDefault()
     {
-        ChangeRatePerSecond = changeRatePerSecondDefualt;
+        changeRatePerSecond = changeRatePerSecondDefualt;
     }
 
     public void SetLevelsToMax()
@@ -49,6 +50,6 @@ public class CreatureOxygen : MonoBehaviour
 
     void Update()
     {
-        Levels += ChangeRatePerSecond * Time.deltaTime;
+        Levels += changeRatePerSecond * Time.deltaTime;
     }
 }
