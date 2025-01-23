@@ -15,14 +15,15 @@ public class CreatureOxygen : MonoBehaviour
         set {
             if (value < 0)
             {
-                levels = 0;
+                value = 0;
                 OnDepleted?.Invoke();
             }
             else if (value > MaxLevels)
             {
-                levels = MaxLevels;
+                value = MaxLevels;
             }
-            else if (value != levels) 
+            
+            if (value != levels) 
             { 
                 OnChanged?.Invoke(value);
                 levels = value;
