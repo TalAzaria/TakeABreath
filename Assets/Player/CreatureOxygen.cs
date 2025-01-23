@@ -4,6 +4,7 @@ using UnityEngine;
 public class CreatureOxygen : MonoBehaviour
 {
     public Action OnDepleted;
+    public Action<float> OnChanged;
     private float changeRatePerSecondDefualt = -0.5f;
     public float ChangeRatePerSecond;
     public float MaxLevels = 50;
@@ -11,24 +12,32 @@ public class CreatureOxygen : MonoBehaviour
     public float Levels
     {
         get { return levels; }
-        set { 
-            if(value < 0)
+        set {
+            if (value < 0)
             {
-                value = 0;
+                levels = 0;
                 OnDepleted?.Invoke();
             }
-            else if(value > MaxLevels)
+            else if (value > MaxLevels)
             {
-                value = MaxLevels;
+                levels = MaxLevels;
             }
-            
-            levels = value;
+            else if (value != levels) 
+            { 
+                OnChanged?.Invoke(value);
+                levels = value;
+            }
         }
     }
 
     public void SetChangeRateToDefault()
     {
         ChangeRatePerSecond = changeRatePerSecondDefualt;
+    }
+
+    public void SetLevelsToMax()
+    {
+        Levels = MaxLevels;
     }
 
     private void Awake()
