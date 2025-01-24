@@ -8,13 +8,15 @@ public class PlayerMovement : MonoBehaviour
     public float downwardSpeed = 2f;
     public bool enableDownwardMovement = true;
     private Vector2 currentVelocity;
-
     private float originalMoveSpeed;
 
 
     void Start()
     {
         originalMoveSpeed = moveSpeed;
+        OnIncrementCollectedPeopleDown();
+        OnIncrementCollectedPeopleDown();
+
 
     }
 
@@ -44,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeDownwardSpeedBasedOnPeople(int peopleCountChange)
     {
-        moveSpeed = originalMoveSpeed - peopleCountChange;
+        moveSpeed = originalMoveSpeed * (peopleCountChange * 0.5f);
+
     }
 
     public void OnIncrementCollectedPeopleDown()
