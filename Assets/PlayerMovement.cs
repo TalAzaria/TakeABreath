@@ -101,14 +101,14 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case 1:
                 // Logic for when there is 1 player
-                Debug.Log("There is 1 player.");
+                Debug.Log("There is 1 npcs.");
                 //moveSpeed = originalMoveSpeed * 0.8f;
                 moveSpeed = 4f;
                 downwardSpeed = 3f;
                 break;
             case 2:
                 // Logic for when there are 2 players
-                Debug.Log("There are 2 players."); 
+                Debug.Log("There are 2 npcs."); 
                 //moveSpeed = originalMoveSpeed * 0.6f; 
                 moveSpeed = 3f;
                 downwardSpeed = 4f;
@@ -116,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
             case 3:
                 // Logic for when there are 3 players
-                Debug.Log("There are 3 players.");
+                Debug.Log("There are 3 npcs.");
                 //moveSpeed = originalMoveSpeed * 0.4f; 
                 moveSpeed = 2f;
                 downwardSpeed = 5f;
@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     moveSpeed = 0.5f;
                     downwardSpeed = 6f;
-                    Debug.Log("Maximum players. Can't move upward");
+                    Debug.Log("Maximum npcs. Can't move upward");
                     
                 }
                 else
