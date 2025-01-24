@@ -13,6 +13,13 @@ public class PlayerMovement : MonoBehaviour
     private int maxToHold = 4;
     [SerializeField] private Transform Swimmer;
 
+    [Header("Bubble Emitter")]
+    [SerializeField] private Transform BubbleEmitter;
+    [SerializeField] private Vector3 PositionUpperLeft = new Vector3(0, 0, 0);
+    [SerializeField] private Vector3 PositionUpperRight = new Vector3(0, 0, 0);
+    [SerializeField] private Vector3 PositionLowerLeft = new Vector3(0, 0, 0);
+    [SerializeField] private Vector3 PositionLowerRight = new Vector3(0, 0, 0);
+
     void Start()
     {
         originalMoveSpeed = moveSpeed;
@@ -63,6 +70,23 @@ public class PlayerMovement : MonoBehaviour
             euler = Swimmer.localEulerAngles;
             euler.y = (euler.z == 0) ? 0 : 180;
             Swimmer.localEulerAngles = euler;
+        }
+
+        if ((euler.y == 0) && (euler.z == 0))
+        {
+            BubbleEmitter.localPosition = PositionUpperRight;
+        }
+        else if ((euler.y == 180) && (euler.z == 0))
+        {
+            BubbleEmitter.localPosition = PositionUpperLeft;
+        }
+        else if ((euler.y == 0) && (euler.z == 180))
+        {
+            BubbleEmitter.localPosition = PositionLowerRight;
+        }
+        else if ((euler.y == 180) && (euler.z == 180))
+        {
+            BubbleEmitter.localPosition = PositionLowerLeft;
         }
     }
 
