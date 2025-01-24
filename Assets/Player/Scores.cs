@@ -185,7 +185,7 @@ public class Scores : MonoBehaviour
             var length = Mathf.Min(_entryTextObjects.Length, entries.Length);
             for (int i = 0; i < length; i++)
             {
-                _entryTextObjects[i].text = $"{entries[i].Rank}. {entries[i].Username}";
+                _entryTextObjects[i].text = $"{entries[i].Username}";
                 _entryScoreObjects[i].text = $"{entries[i].Score}";
 
                 playerNames.Add(entries[i].Username);
