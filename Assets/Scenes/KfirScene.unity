@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 88568170053762506, guid: 40ec7ac0b40bf394c940befa269c4cd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -767,7 +767,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -2
   m_Sprite: {fileID: -4627101341792079471, guid: ee0685124c9eb7c419effd1976eeef75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2657,6 +2657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverManager: {fileID: 1251364589}
+  NPCVisuals: []
+  NPCCounters: 
 --- !u!1001 &1371352159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2669,34 +2671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rescue Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 4843722256819320295, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7540364722606942347, guid: 93aae7406903918488b397d6b5fd7091, type: 3}
-    - target: {fileID: 4843722256819320295, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5099184893228917313, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 5099184893228917313, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 5867398744949340454, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6021193123095133035, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1251364586}
-    - target: {fileID: 6021193123095133035, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: MainSurface
-      value: 
-      objectReference: {fileID: 294170361}
     - target: {fileID: 6182442916377574904, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.4
@@ -2736,14 +2714,6 @@ PrefabInstance:
     - target: {fileID: 6182442916377574904, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6986398754848105152, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6986398754848105152, guid: 9f0192dfcd6206b459f21a00a37782ce, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3015,7 +2985,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: -1
   m_Sprite: {fileID: 2693724275043845724, guid: 94b11e74b78d4d340989a312f316b210, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
