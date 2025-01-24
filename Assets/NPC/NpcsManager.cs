@@ -20,12 +20,10 @@ public class NpcsManager : MonoBehaviour
     private void OnCreatureOxygenDepleted(GameObject npc)
     {
         npc.GetComponent<CapsuleCollider2D>().enabled = false;
-        npc.GetComponent<SpriteRenderer>().color = Color.red;
-        npcOxygenList.Remove(npc.GetComponent<CreatureOxygen>());
+        CreatureOxygen creature = npc.GetComponent<CreatureOxygen>();
+        creature.bubblesParticles.Stop();
+        npcOxygenList.Remove(creature);
         if (npcOxygenList.Count == 0)
-        {
-            Debug.Log("All NPCs are dead. Game Over!");
             gameOverManager?.EndGame();
-        }
     }
 }

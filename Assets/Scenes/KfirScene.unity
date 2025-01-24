@@ -259,17 +259,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: a6369b88a3d82464f8c5dbc67f13e10c, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: a6369b88a3d82464f8c5dbc67f13e10c, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: a6369b88a3d82464f8c5dbc67f13e10c, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -467,17 +459,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: a73754ef7cf28704eada82cfd1192044, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: a73754ef7cf28704eada82cfd1192044, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: a73754ef7cf28704eada82cfd1192044, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -968,10 +952,6 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: d9e078a6f0c2f02459842545aa91ba2d, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2416,17 +2396,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 41d5434b42442684084df6c69147ccf2, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: 41d5434b42442684084df6c69147ccf2, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: 41d5434b42442684084df6c69147ccf2, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2490,17 +2462,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 78f6d39bfa90d3240aa5887c86c1fe51, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: 78f6d39bfa90d3240aa5887c86c1fe51, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: 78f6d39bfa90d3240aa5887c86c1fe51, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2607,17 +2571,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2830,17 +2786,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 2cbd29212469b844aaa16991a0c2c687, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: 2cbd29212469b844aaa16991a0c2c687, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: 2cbd29212469b844aaa16991a0c2c687, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3258,17 +3206,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: d2760e930f0b58c4b90ed68ea223b158, type: 3}
-      propertyPath: MaxLevels
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069546804671250109, guid: d2760e930f0b58c4b90ed68ea223b158, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
-    - target: {fileID: 6069546804671250109, guid: d2760e930f0b58c4b90ed68ea223b158, type: 3}
-      propertyPath: changeRatePerSecond
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

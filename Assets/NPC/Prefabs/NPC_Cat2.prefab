@@ -24,13 +24,25 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2197118955216257159, guid: b9f5d394c1b0a1d42ae1d7892f2b3a95, type: 3}
+    - target: {fileID: 4469955029601503752, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: MaxLevels
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469955029601503752, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: bubblesParticles
+      value: 
+      objectReference: {fileID: 7512479726762220985}
+    - target: {fileID: 4469955029601503752, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: changeRatePerSecond
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5428557041247965165, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8b93b1562ecd58043b44bd980541d555, type: 2}
     - target: {fileID: 5538262291897604173, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 5538262291897604173, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: m_LocalPosition.y
@@ -81,3 +93,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+--- !u!198 &7512479726762220985 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 176366345178016012, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+  m_PrefabInstance: {fileID: 7652500614409565365}
+  m_PrefabAsset: {fileID: 0}
