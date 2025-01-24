@@ -5,7 +5,7 @@ public class GameOverManager : MonoBehaviour
 {
     //[SerializeField] private GameObject gameOverUI; 
 
-    public void TriggerGameOver()
+    public void EndGame()
     {
         Time.timeScale = 0;
         Debug.Log("game over");

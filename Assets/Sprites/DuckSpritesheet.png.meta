@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DuckSpritesheet_0: -8979848914388145905
+      DuckSpritesheet_1: 9047738895080715150
+      DuckSpritesheet_2: 8331325817753894313
+      DuckSpritesheet_3: 628863162758060419
+      DuckSpritesheet_4: -8813087273381113915
+      DuckSpritesheet_5: 7774824694846654907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

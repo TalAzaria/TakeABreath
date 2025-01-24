@@ -116,6 +116,7 @@ public class NPCLogic : MonoBehaviour
 
     private void OnNpcDied(GameObject @object)
     {
+        
         @object.transform.SetParent(null);
         @object.GetComponent<CapsuleCollider2D>().enabled = false;
         @object.GetComponent<SpriteRenderer>().color = Color.red;
@@ -129,7 +130,7 @@ public class NPCLogic : MonoBehaviour
             Debug.Log("All NPCs are dead. Game Over!");
             if (gameOverManager != null)
             {
-                gameOverManager.TriggerGameOver();
+                gameOverManager.EndGame();
             }
         }
     }

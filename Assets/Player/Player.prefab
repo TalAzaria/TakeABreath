@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 7321015573123955968}
   - component: {fileID: 5051585474621179760}
   - component: {fileID: 2999873448974911179}
+  - component: {fileID: 1197794749271077503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5deb5109aa63848a59fc71fc2fe8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverManager: {fileID: 1197794749271077503}
   changeRatePerSecond: -0.5
   MaxLevels: 50
   levels: 0
@@ -283,8 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa7eee825a7d5a498526502cbd0a115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseOffset: {x: 1, y: 0}
+  gameOverManager: {fileID: 1197794749271077503}
   npcs: []
+  deadNps: []
   surface: {fileID: 0}
 --- !u!50 &2999873448974911179
 Rigidbody2D:
@@ -313,3 +316,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1197794749271077503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328059920084717396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef74ff69ad3743a285cc271d7a594c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
