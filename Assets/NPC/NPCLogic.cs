@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
 {
+    public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
     public Vector2 baseOffset = new Vector2(1.0f, 0);
     private float spacing = 0.6f;
     public List<GameObject> npcs = new List<GameObject>();
-
+    public Surface surface;
     private void Start()
     {
+        surface.OnReachedSurface += OnReachSurface;
         playerTransform = this.transform;
     }
 
@@ -65,6 +67,34 @@ public class NPCLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         collider.enabled = true;
+    }
+
+    private void OnReachSurface()
+    {
+        if (npcs.Count>0)
+        {
+            OnReachSurfaceWithNpc?.Invoke(npcs.Count);
+        }
+    }
+    private IEnumerator DropAllNpcOnSurface(GameObject npc)
+    {
+        Vector2 surfacePosition = surface.transform.position;
+
+        Rigidbody2D npcRigidbody = npc.GetComponent<Rigidbody2D>();
+        if (npcRigidbody != null)
+        {
+            float fallSpeed = 5f; // Adjust fall speed
+            while (Vector2.Distance(npc.transform.position, surfacePosition) > 0.1f)
+            {
+                npc.transform.position = Vector2.MoveTowards(npc.transform.position, surfacePosition, fallSpeed * Time.deltaTime);
+                yield return null;
+            }
+
+            npc.transform.position = surfacePosition; // Ensure it lands exactly on the surface
+        }
+
+        // Destroy the NPC after it reaches the surface
+        Destroy(npc);  // This destroys the NPC GameObject
     }
     private void OnNpcDied(GameObject @object)
     {
