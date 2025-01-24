@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CreatureOxygen : MonoBehaviour
 {
+    public ParticleSystem bubblesParticles;
     public Action<GameObject> OnDepleted;
     public GameOverManager gameOverManager;
     public Action<float> OnChanged;
@@ -32,11 +33,14 @@ public class CreatureOxygen : MonoBehaviour
                 {
                     OnDepleted?.Invoke(this.gameObject);
                     OnDepleted = null;
-                    gameOverManager?.EndGame();
-                    gameOverManager = null;
                 }
             }
         }
+    }
+
+    private void Awake()
+    {
+        Levels = MaxLevels;
     }
 
     public void SetChangeRateToDefault()
@@ -47,12 +51,6 @@ public class CreatureOxygen : MonoBehaviour
     public void SetLevelsToMax()
     {
         Levels = MaxLevels;
-    }
-
-    private void Awake()
-    {
-        Levels = MaxLevels;
-        SetChangeRateToDefault();
     }
 
     void Update()
