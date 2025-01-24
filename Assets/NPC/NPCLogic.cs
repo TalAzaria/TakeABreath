@@ -179,6 +179,9 @@ public class NPCLogic : MonoBehaviour
 
     public void insideBubble()
     {
+        if (npcInsideBubble == null)
+            return;
+
         CapsuleCollider2D capsule = npcInsideBubble.GetComponent<CapsuleCollider2D>();
         if (capsule == null)
         {
