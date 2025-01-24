@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseOffset: {x: 1, y: 0}
   npcs: []
-  surface: {fileID: 0}
+  surface: {fileID: 294170361}
 --- !u!1 &1340004291
 GameObject:
   m_ObjectHideFlags: 0
