@@ -15,10 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Bubble Emitter")]
     [SerializeField] private Transform BubbleEmitter;
-    [SerializeField] private Vector3 PositionUpperLeft = new Vector3(0, 0, 0);
-    [SerializeField] private Vector3 PositionUpperRight = new Vector3(0, 0, 0);
-    [SerializeField] private Vector3 PositionLowerLeft = new Vector3(0, 0, 0);
-    [SerializeField] private Vector3 PositionLowerRight = new Vector3(0, 0, 0);
+    [SerializeField] private Vector3 PositionUpperLeft = new Vector3(-0.2f, 1, 0);
+    [SerializeField] private Vector3 PositionUpperRight = new Vector3(0.2f, 1, 0);
+    [SerializeField] private Vector3 PositionLowerLeft = new Vector3(-0.2f, -1, 0);
+    [SerializeField] private Vector3 PositionLowerRight = new Vector3(0.2f, -1, 0);
 
     void Start()
     {
