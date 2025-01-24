@@ -202,10 +202,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StartGameLogic, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 8278980053000815108}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1269,10 +1269,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 464472504373410941, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
-      propertyPath: PlayerOxygen
-      value: 
-      objectReference: {fileID: 1251364585}
     - target: {fileID: 883844389740230885, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1364,7 +1360,7 @@ PrefabInstance:
     - target: {fileID: 3964121510173188462, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8278980053000815108}
     - target: {fileID: 8402568794963191838, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
       propertyPath: m_Name
       value: Main Canvas
