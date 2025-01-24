@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
 {
+    public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
     public Vector2 baseOffset = new Vector2(1.0f, 0);
     private float spacing = 0.6f;
     public List<GameObject> npcs = new List<GameObject>();
-
+    public Surface surface;
     private void Start()
     {
+        surface.OnReachedSurface += OnReachSurface;
         playerTransform = this.transform;
     }
 
@@ -65,6 +67,14 @@ public class NPCLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         collider.enabled = true;
+    }
+
+    private void OnReachSurface()
+    {
+        if (npcs.Count>0)
+        {
+            OnReachSurfaceWithNpc?.Invoke(npcs.Count);
+        }
     }
     private void OnNpcDied(GameObject @object)
     {
