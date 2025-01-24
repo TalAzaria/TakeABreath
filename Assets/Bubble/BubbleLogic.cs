@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class BubbleLogic : MonoBehaviour
 
     public GameObject Player;
     CreatureOxygen playerOxygen;
+    List<GameObject> npcs = new List<GameObject>();
 
     public float oxygenBoostRate = 0.5f;
 
@@ -39,10 +41,19 @@ public class BubbleLogic : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            npcs = Player.GetComponent<NPCLogic>().npcs;
+
             if (playerOxygen != null)
             {
                 playerOxygen.changeRatePerSecond = 0;
                 playerOxygen.Levels += oxygenBoostRate;
+            }
+
+            foreach (GameObject npc in npcs)
+            {
+                CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
+                npcOxygen.changeRatePerSecond = 0;
+                npcOxygen.Levels += oxygenBoostRate;
             }
 
             oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
@@ -53,16 +64,23 @@ public class BubbleLogic : MonoBehaviour
                 Destroy(gameObject);
             }
 
-
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Player")){
+            npcs = Player.GetComponent<NPCLogic>().npcs;
+
             if (playerOxygen != null)
             {
                 playerOxygen.SetChangeRateToDefault();
+
+                foreach (GameObject npc in npcs)
+                {
+                    CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
+                    npcOxygen.SetChangeRateToDefault();
+                }
             }
         }
     }

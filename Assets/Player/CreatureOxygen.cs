@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreatureOxygen : MonoBehaviour
 {
-    public Action OnDepleted;
+    public Action<GameObject> OnDepleted;
     public Action<float> OnChanged;
     private float changeRatePerSecondDefualt = -0.5f;
     public float changeRatePerSecond;
@@ -17,7 +17,7 @@ public class CreatureOxygen : MonoBehaviour
             if (value < 0)
             {
                 value = 0;
-                OnDepleted?.Invoke();
+                OnDepleted?.Invoke(this.gameObject);
             }
             else if (value > MaxLevels)
             {
