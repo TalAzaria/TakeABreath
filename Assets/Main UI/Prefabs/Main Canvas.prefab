@@ -583,10 +583,11 @@ MonoBehaviour:
   RescuedCount: 0
   RescuedDisplay: {fileID: 8849230847768914211}
   RescuedAnimator: {fileID: 162020804415489157}
-  RescuedAnimationDelay: 1
+  RescuedAnimationDelay: 0.5
   NPCsOxygenLeft: 100
   NPCsOxygenDisplay: {fileID: 4109074470858544348}
   NPCsOxygenAnimator: {fileID: 8937676026706930455}
   ColorThresholdPercent: 25
   OxygenOkColor: {r: 0, g: 1, b: 0.9882353, a: 1}
   OxygenRunningOutColor: {r: 1, g: 0, b: 0, a: 1}
+  PlayerOxygen: {fileID: 0}

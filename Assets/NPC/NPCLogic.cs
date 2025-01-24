@@ -13,6 +13,7 @@ public class NPCLogic : MonoBehaviour
     public Surface surface;
     private void Start()
     {
+        surface = Surface.Instance;
         surface.OnReachedSurface += OnReachSurface;
         playerTransform = this.transform;
     }
