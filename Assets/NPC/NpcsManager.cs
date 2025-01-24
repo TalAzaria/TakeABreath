@@ -6,12 +6,11 @@ using UnityEngine;
 public class NpcsManager : MonoBehaviour
 {
     public GameOverManager gameOverManager;
-    private GameObject npcsParent;
     private List<CreatureOxygen> npcOxygenList = new();
     
     private void Start()
     {
-        npcOxygenList = npcsParent.GetComponentsInChildren<CreatureOxygen>().ToList();
+        npcOxygenList = GetComponentsInChildren<CreatureOxygen>().ToList();
         foreach (CreatureOxygen creature in npcOxygenList)
         {
             creature.OnDepleted += OnCreatureOxygenDepleted;
