@@ -5,15 +5,29 @@ using UnityEngine;
 
 public class NpcsManager : MonoBehaviour
 {
+    public static NpcsManager Instance = null;
     public GameOverManager gameOverManager;
-    private List<CreatureOxygen> npcOxygenList = new();
-    
+    private List<CreatureOxygen> npcOxygenList = new List<CreatureOxygen>();
+    public List<NPCVisual> NPCVisuals = new List<NPCVisual>();
+    public List<int> NPCCounters = new List<int>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         npcOxygenList = GetComponentsInChildren<CreatureOxygen>().ToList();
         foreach (CreatureOxygen creature in npcOxygenList)
         {
             creature.OnDepleted += OnCreatureOxygenDepleted;
+        }
+        
+        NPCVisuals = GetComponentsInChildren<NPCVisual>().ToList();
+        foreach (NPCVisual npc in NPCVisuals)
+        {
+            NPCCounters.Add(0);
         }
     }
 
@@ -25,5 +39,11 @@ public class NpcsManager : MonoBehaviour
         npcOxygenList.Remove(creature);
         if (npcOxygenList.Count == 0)
             gameOverManager?.EndGame();
+    }
+
+    public void OnNPCRescued(GameObject npc)
+    {
+        NPCVisual npcVisual = npc.GetComponent<NPCVisual>();
+        NPCCounters[(int)(npcVisual.NPCType)]++;
     }
 }

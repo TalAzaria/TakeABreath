@@ -106,6 +106,7 @@ public class NPCLogic : MonoBehaviour
             {
                 GameObject npc = npcs[i];
                 DropOneNPC();
+                NpcsManager.Instance.OnNPCRescued(npc);
                 Destroy(npc);
             }
         }
