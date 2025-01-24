@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,12 @@ public class NPCLogic : MonoBehaviour
         playerTransform = this.transform;
     }
 
+    private void Update()
+    {
+        DropOneNPC();
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("NPC"))
@@ -26,10 +33,39 @@ public class NPCLogic : MonoBehaviour
 
             npcs.Add(collision.gameObject);
             collision.GetComponent<CreatureOxygen>().OnDepleted += OnNpcDied;
-            this.GetComponent<PlayerMovement>().OnIncrementCollectedPeopleDown();
+            this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
         }
     }
+    private void DropOneNPC()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && npcs.Count > 0) // Check for spacebar and if there's an NPC to drop
+        {
+            GameObject npcToDrop = npcs[npcs.Count - 1];
 
+            npcToDrop.transform.SetParent(null);
+
+            npcToDrop.transform.position = playerTransform.position + Vector3.right * 2f;
+            Collider2D npcCollider = npcToDrop.GetComponent<Collider2D>();
+            if (npcCollider != null)
+            {
+                npcCollider.enabled = false;
+                StartCoroutine(EnableNpcColliderAfterDelay(npcCollider, 2f)); 
+            }
+
+            npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
+
+            npcs.RemoveAt(npcs.Count - 1);
+
+            this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
+
+            Debug.Log($"Dropped NPC Remaining NPCs: {npcs.Count}");
+        }
+    }
+    private IEnumerator EnableNpcColliderAfterDelay(Collider2D collider, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        collider.enabled = true;
+    }
     private void OnNpcDied(GameObject @object)
     {
         @object.transform.SetParent(null);
@@ -42,6 +78,7 @@ public class NPCLogic : MonoBehaviour
             Vector2 offset = new Vector2(baseOffset.x + (i * spacing), baseOffset.y);
             npcs[i].transform.localPosition = offset;
         }
+        this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
     }
 
 }
