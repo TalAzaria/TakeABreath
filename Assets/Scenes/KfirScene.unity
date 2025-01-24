@@ -774,6 +774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8266462717520064715, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2356,6 +2360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8266462717520064715, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2616,6 +2624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 8266462717520064715, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2629,10 +2641,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510428105687390329, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5051585474621179760, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
       propertyPath: surface
       value: 
       objectReference: {fileID: 294170361}
+    - target: {fileID: 8308876424883688911, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8328059920084717396, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
       propertyPath: m_Name
       value: Player
