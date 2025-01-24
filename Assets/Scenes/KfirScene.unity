@@ -826,9 +826,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984b362e0f44c59438bd0ac909885afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 18
-  drag: 0.9
-  downwardSpeed: 2
+  moveSpeed: 3
+  drag: 1
+  downwardSpeed: 1
   enableDownwardMovement: 1
 --- !u!50 &1251364584
 Rigidbody2D:
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseOffset: {x: 1, y: 0}
-  numOfPeopleCollected: 0
+  npcs: []
 --- !u!1001 &1374903269
 PrefabInstance:
   m_ObjectHideFlags: 0
