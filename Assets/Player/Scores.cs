@@ -1,5 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Dan.Main;
+using NUnit.Framework;
+using TMPro;
 using UnityEngine;
 
 public class Scores : MonoBehaviour
@@ -8,6 +12,15 @@ public class Scores : MonoBehaviour
     public bool TestsEnabled = true;
     private bool areAllTestsPassed = true;
 
+    [SerializeField] private int localScore;
+
+    [SerializeField] private TMP_Text[] _entryTextObjects;
+    [SerializeField] private TMP_Text[] _entryScoreObjects;
+
+    [SerializeField] private TMP_InputField _usernameInputField;
+    List<string> playerNames = new List<string>();
+
+    [SerializeField] private TMP_Text alreadyExistsText;
     private class Score
     {
         public string name;
@@ -39,10 +52,18 @@ public class Scores : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     private void Start()
     {
+        alreadyExistsText.enabled = false;
+
+        Leaderboards.TakeABreath.ResetPlayer();
+
+        LeaderboardCreator.LoggingEnabled = false;
+        LoadEntries();
+
         if (TestsEnabled)
         {
             if (DebugModeEnabled)
@@ -79,6 +100,15 @@ public class Scores : MonoBehaviour
         }
     }
 
+    void OnPlayerResetSuccess(bool success)
+    {
+        Debug.Log(success ? "Player entry was successfully reset." : "Failed to reset player entry.");
+    }
+
+    void OnPlayerResetError(string errorMessage)
+    {
+        Debug.LogError("Error resetting player entry: " + errorMessage);
+    }
     public void AddScore(string name, int value)
     {
         Score score = new Score(name, value);
@@ -137,5 +167,45 @@ public class Scores : MonoBehaviour
             Debug.Log("Test failed! the expected list and the list are not the same size");
             areAllTestsPassed = false;
         }
+    }
+
+    private void LoadEntries()
+    {
+        LeaderboardCreator.LoggingEnabled = false;
+
+        Leaderboards.TakeABreath.GetEntries(entries =>
+        {
+            foreach (var t in _entryTextObjects)
+                t.text = "";
+
+            var length = Mathf.Min(_entryTextObjects.Length, entries.Length);
+            for (int i = 0; i < length; i++)
+            {
+                _entryTextObjects[i].text = $"{entries[i].Rank}. {entries[i].Username}";
+                _entryScoreObjects[i].text = $"{entries[i].Score}";
+
+                playerNames.Add(entries[i].Username);
+            }
+        });
+    }
+
+    public void UploadEntry()
+    {
+        if (!playerNames.Contains(_usernameInputField.text))
+        {
+            alreadyExistsText.enabled = false;
+
+            Leaderboards.TakeABreath.UploadNewEntry(_usernameInputField.text, localScore, isSuccessful =>
+            {
+                if (isSuccessful)
+                    LoadEntries();
+            });
+        }
+        else
+        {
+            Debug.Log("username already exist");
+            alreadyExistsText.enabled = true;
+        }
+
     }
 }
