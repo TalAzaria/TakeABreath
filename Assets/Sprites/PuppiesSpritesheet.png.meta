@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -484,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PuppiesSpritesheet_0: -7270680871343916861
+      PuppiesSpritesheet_1: 392880828098301410
+      PuppiesSpritesheet_10: 2074662213109561011
+      PuppiesSpritesheet_11: -2473862311688530840
+      PuppiesSpritesheet_12: -9194335354889120637
+      PuppiesSpritesheet_13: -870375824446402913
+      PuppiesSpritesheet_14: -8867166174682582854
+      PuppiesSpritesheet_2: -8499216678851324917
+      PuppiesSpritesheet_3: -5017248705549013781
+      PuppiesSpritesheet_4: 1638563468208850532
+      PuppiesSpritesheet_5: -7212676505807341973
+      PuppiesSpritesheet_6: 7122456462451144502
+      PuppiesSpritesheet_7: 4911335384413395727
+      PuppiesSpritesheet_8: 2592958551377252392
+      PuppiesSpritesheet_9: 5097730445088777737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
