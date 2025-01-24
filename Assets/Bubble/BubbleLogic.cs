@@ -94,16 +94,12 @@ public class BubbleLogic : MonoBehaviour
 
     public void npcIsInsideLogic(CreatureOxygen npcOxygen)
     {
-        Debug.Log(npcOxygen.isHoldingOnNpc);
         if (npcOxygen.isHoldingOnNpc == false)
         {
-            Debug.Log(npcOxygen.isHoldingOnNpc);
-
             npcOxygen.changeRatePerSecond = 0;
             npcOxygen.Levels += oxygenBoostRate;
             oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
             transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
-            Debug.Log(oxygenInsideBubble);
         }
     }
 
