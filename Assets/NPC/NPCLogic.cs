@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
@@ -18,6 +19,10 @@ public class NPCLogic : MonoBehaviour
 
     public float wobbleStrength = 0.25f;
     public float wobbleSpeed = 1.5f;
+
+    private GameObject npcInsideBubble;
+
+    private bool isInsideBubble = false;
 
 
     private void Start()
@@ -51,6 +56,11 @@ public class NPCLogic : MonoBehaviour
                 WobbleNPC(npc, i);
             }
         }
+
+        if (isInsideBubble)
+        {
+            insideBubble();
+        }
     }
 
 
@@ -64,6 +74,7 @@ public class NPCLogic : MonoBehaviour
                 collision.transform.SetParent(slot);
                 collision.transform.localPosition = Vector3.zero;
                 npcs.Add(collision.gameObject);
+                collision.GetComponent<CreatureOxygen>().isHoldingOnNpc = true;
                 collision.GetComponent<CreatureOxygen>().OnDepleted += OnNpcDied;
                 this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
                 isDelay = true;
@@ -88,6 +99,9 @@ public class NPCLogic : MonoBehaviour
         }
 
         npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
+        npcToDrop.GetComponent<CreatureOxygen>().isHoldingOnNpc = false;
+        npcInsideBubble = npcToDrop;
+        insideBubble();
 
         npcs.RemoveAt(npcs.Count - 1);
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
@@ -160,6 +174,48 @@ public class NPCLogic : MonoBehaviour
         else
         {
             npcTransform.position = Vector3.Lerp(npcTransform.position, slotTransform.position, Time.deltaTime * wobbleSpeed);
+        }
+    }
+
+    public void insideBubble()
+    {
+        CapsuleCollider2D capsule = npcInsideBubble.GetComponent<CapsuleCollider2D>();
+        if (capsule == null)
+        {
+            Debug.LogError("No CapsuleCollider2D attached to this NPC.");
+            return;
+        }
+
+        // Check for overlaps
+        Collider2D[] overlappingColliders = Physics2D.OverlapCapsuleAll(
+            capsule.bounds.center,               
+            capsule.size,                        
+            capsule.direction,                   
+            0                                    
+        );
+
+        int x = 0;
+
+        foreach (var collider in overlappingColliders)
+        {
+            if (collider != capsule) 
+            {
+                if(collider.name == "AirBubble")
+                {
+                    collider.GetComponent<BubbleLogic>().npcIsInsideLogic(this.GetComponent<CreatureOxygen>());
+                    x = 1;
+                }
+
+            }
+        }
+
+        if(x == 1)
+        {
+            isInsideBubble = true;
+        }
+        else
+        {
+            isInsideBubble = false;
         }
     }
 }

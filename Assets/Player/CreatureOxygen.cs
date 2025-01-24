@@ -11,6 +11,7 @@ public class CreatureOxygen : MonoBehaviour
     public float changeRatePerSecond;
     public float MaxLevels = 50;
     [SerializeField] private float levels;
+    public bool isHoldingOnNpc = false;
     public float Levels
     {
         get { return levels; }
