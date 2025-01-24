@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: a6369b88a3d82464f8c5dbc67f13e10c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -470,6 +474,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: a73754ef7cf28704eada82cfd1192044, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -886,6 +894,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 942732851125853319, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251364589}
+    - target: {fileID: 3806771481871068269, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1251364589}
+    - target: {fileID: 3964121510173188462, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1610283529}
     - target: {fileID: 8402568794963191838, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
       propertyPath: m_Name
       value: Main Canvas
@@ -960,6 +980,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: d9e078a6f0c2f02459842545aa91ba2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2411,6 +2435,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: 41d5434b42442684084df6c69147ccf2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2481,6 +2509,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: 78f6d39bfa90d3240aa5887c86c1fe51, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2594,6 +2626,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2784,6 +2820,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: 2cbd29212469b844aaa16991a0c2c687, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3033,6 +3073,11 @@ Transform:
   - {fileID: 539160805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1610283529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6527132887829838144, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+  m_PrefabInstance: {fileID: 722068955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1797157113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3253,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 1251364589}
+    - target: {fileID: 6377932699231857519, guid: d2760e930f0b58c4b90ed68ea223b158, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
