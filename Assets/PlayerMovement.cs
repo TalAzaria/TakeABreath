@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float originalMoveSpeed;
     private float originalDownwardsSpeed;
     private int maxToHold = 4;
+    [SerializeField] private Transform Swimmer;
 
     void Start()
     {
@@ -31,7 +32,40 @@ public class PlayerMovement : MonoBehaviour
         currentVelocity = Vector2.ClampMagnitude(currentVelocity, moveSpeed);
 
         transform.Translate(currentVelocity * Time.deltaTime);
+        SyncSwimmerOrientation(input);
     }
+
+
+    Vector3 euler = Vector3.zero;
+    private void SyncSwimmerOrientation(Vector2 input)
+    {
+        if (input.y > 0)
+        {
+            euler = Swimmer.localEulerAngles;
+            euler.z = 0;
+            Swimmer.localEulerAngles = euler;
+        }
+        else if (input.y < 0)
+        {
+            euler = Swimmer.localEulerAngles;
+            euler.z = 180;
+            Swimmer.localEulerAngles = euler;
+        }
+
+        if (input.x > 0)
+        {
+            euler = Swimmer.localEulerAngles;
+            euler.y = (euler.z == 0) ? 180 : 0;
+            Swimmer.localEulerAngles = euler;
+        }
+        else if (input.x < 0)
+        {
+            euler = Swimmer.localEulerAngles;
+            euler.y = (euler.z == 0) ? 0 : 180;
+            Swimmer.localEulerAngles = euler;
+        }
+    }
+
 
     private void ChangeDownwardSpeedBasedOnPeople(int PeopleCount)
     {

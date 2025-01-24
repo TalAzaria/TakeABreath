@@ -255,6 +255,7 @@ MonoBehaviour:
   drag: 1
   downwardSpeed: 1
   enableDownwardMovement: 1
+  Swimmer: {fileID: 4508621629748969147}
 --- !u!114 &7321015573123955968
 MonoBehaviour:
   m_ObjectHideFlags: 0
