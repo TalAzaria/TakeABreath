@@ -2330,8 +2330,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0019630245, y: 0}
-  m_Radius: 0.5033443
+  m_Offset: {x: -0.015375773, y: 0.044500317}
+  m_Radius: 2.2192557
 --- !u!114 &794902331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2658,7 +2658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverManager: {fileID: 1251364589}
   NPCVisuals: []
-  NPCCounters: 
+  RescuedNPCCounters: 
+  DeadNPCCounters: 
 --- !u!1001 &1371352159
 PrefabInstance:
   m_ObjectHideFlags: 0
