@@ -107,8 +107,6 @@ public class NPCLogic : MonoBehaviour
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
 
         // Debug.Log($"Dropped NPC. Remaining NPCs: {npcs.Count}");
-        Debug.Log("slots " + npcs.Count);
-
     }
 
     private IEnumerator EnableNpcColliderAfterDelay(Collider2D collider, float delay)
@@ -179,43 +177,46 @@ public class NPCLogic : MonoBehaviour
 
     public void insideBubble()
     {
-        CapsuleCollider2D capsule = npcInsideBubble.GetComponent<CapsuleCollider2D>();
-        if (capsule == null)
+        if (npcInsideBubble != null)
         {
-            Debug.LogError("No CapsuleCollider2D attached to this NPC.");
-            return;
-        }
-
-        // Check for overlaps
-        Collider2D[] overlappingColliders = Physics2D.OverlapCapsuleAll(
-            capsule.bounds.center,               
-            capsule.size,                        
-            capsule.direction,                   
-            0                                    
-        );
-
-        int x = 0;
-
-        foreach (var collider in overlappingColliders)
-        {
-            if (collider != capsule) 
+            CapsuleCollider2D capsule = npcInsideBubble.GetComponent<CapsuleCollider2D>();
+            if (capsule == null)
             {
-                if(collider.name == "AirBubble")
-                {
-                    collider.GetComponent<BubbleLogic>().npcIsInsideLogic(this.GetComponent<CreatureOxygen>());
-                    x = 1;
-                }
-
+                Debug.LogError("No CapsuleCollider2D attached to this NPC.");
+                return;
             }
-        }
 
-        if(x == 1)
-        {
-            isInsideBubble = true;
-        }
-        else
-        {
-            isInsideBubble = false;
+            // Check for overlaps
+            Collider2D[] overlappingColliders = Physics2D.OverlapCapsuleAll(
+                capsule.bounds.center,
+                capsule.size,
+                capsule.direction,
+                0
+            );
+
+            int x = 0;
+
+            foreach (var collider in overlappingColliders)
+            {
+                if (collider != capsule)
+                {
+                    if (collider.name == "AirBubble")
+                    {
+                        collider.GetComponent<BubbleLogic>().npcIsInsideLogic(this.GetComponent<CreatureOxygen>());
+                        x = 1;
+                    }
+
+                }
+            }
+
+            if (x == 1)
+            {
+                isInsideBubble = true;
+            }
+            else
+            {
+                isInsideBubble = false;
+            }
         }
     }
 }
