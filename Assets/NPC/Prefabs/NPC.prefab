@@ -174,7 +174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3571741974344697640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e4b2cb19d7644d48334abb357ac649, type: 3}
+  m_Script: {fileID: 11500000, guid: a5a65527f5b8bc9468be05ddfa755db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 6866644320424519206}
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5deb5109aa63848a59fc71fc2fe8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblesParticles: {fileID: 0}
+  bubblesParticles: {fileID: 176366345178016012}
   gameOverManager: {fileID: 0}
   changeRatePerSecond: -0.5
   MaxLevels: 5
@@ -702,6 +702,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8a178fa6b594c4aa92932f200e3d78, type: 3}
+--- !u!198 &176366345178016012 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3533095622091319274, guid: 3e8a178fa6b594c4aa92932f200e3d78, type: 3}
+  m_PrefabInstance: {fileID: 3709426769738518246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &349607488828661724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008355223879029050, guid: 3e8a178fa6b594c4aa92932f200e3d78, type: 3}

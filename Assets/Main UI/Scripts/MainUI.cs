@@ -18,6 +18,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] Color OxygenOkColor;
     [SerializeField] Color OxygenRunningOutColor;
     [SerializeField] CreatureOxygen PlayerOxygen;
+    [SerializeField] Endgame EndgamePopup;
 
 
 
@@ -69,5 +70,11 @@ public class MainUI : MonoBehaviour
         {
             NPCsOxygenDisplay.color = OxygenRunningOutColor;
         }
+    }
+
+
+    public void OnEndgame()
+    {
+        EndgamePopup.OnEndgame();
     }
 }
