@@ -19,8 +19,11 @@ public class NPCLogic : MonoBehaviour
 
     private void Update()
     {
-        DropOneNPC();
-
+       
+        if (Input.GetKeyDown(KeyCode.Space) && npcs.Count > 0)
+        {
+            DropOneNPC();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,8 +43,7 @@ public class NPCLogic : MonoBehaviour
     }
     private void DropOneNPC()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && npcs.Count > 0) // Check for spacebar and if there's an NPC to drop
-        {
+       
             GameObject npcToDrop = npcs[npcs.Count - 1];
 
             npcToDrop.transform.SetParent(null);
@@ -61,12 +63,15 @@ public class NPCLogic : MonoBehaviour
             this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
 
             Debug.Log($"Dropped NPC Remaining NPCs: {npcs.Count}");
-        }
+        
     }
     private IEnumerator EnableNpcColliderAfterDelay(Collider2D collider, float delay)
     {
         yield return new WaitForSeconds(delay);
-        collider.enabled = true;
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
     }
 
     private void OnReachSurface()
@@ -74,28 +79,15 @@ public class NPCLogic : MonoBehaviour
         if (npcs.Count>0)
         {
             OnReachSurfaceWithNpc?.Invoke(npcs.Count);
-        }
-    }
-    private IEnumerator DropAllNpcOnSurface(GameObject npc)
-    {
-        Vector2 surfacePosition = surface.transform.position;
-
-        Rigidbody2D npcRigidbody = npc.GetComponent<Rigidbody2D>();
-        if (npcRigidbody != null)
-        {
-            float fallSpeed = 5f; // Adjust fall speed
-            while (Vector2.Distance(npc.transform.position, surfacePosition) > 0.1f)
+            for (int i = npcs.Count-1; i >= 0 ; i--)
             {
-                npc.transform.position = Vector2.MoveTowards(npc.transform.position, surfacePosition, fallSpeed * Time.deltaTime);
-                yield return null;
+                GameObject npc = npcs[i];
+                DropOneNPC();
+                Destroy(npc);
             }
-
-            npc.transform.position = surfacePosition; // Ensure it lands exactly on the surface
         }
-
-        // Destroy the NPC after it reaches the surface
-        Destroy(npc);  // This destroys the NPC GameObject
     }
+   
     private void OnNpcDied(GameObject @object)
     {
         @object.transform.SetParent(null);
