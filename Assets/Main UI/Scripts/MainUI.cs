@@ -17,6 +17,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] int ColorThresholdPercent = 25;
     [SerializeField] Color OxygenOkColor;
     [SerializeField] Color OxygenRunningOutColor;
+    [SerializeField] CreatureOxygen PlayerOxygen;
 
 
 
@@ -25,6 +26,13 @@ public class MainUI : MonoBehaviour
         Instance = this;
         RescuedDisplay.text = "x" + RescuedCount.ToString();
         NPCsOxygenDisplay.text = NPCsOxygenLeft.ToString() + "%";
+    }
+
+
+
+    private void Start()
+    {
+        PlayerOxygen.OnChanged += ReduceOxygen;
     }
 
 
@@ -47,9 +55,9 @@ public class MainUI : MonoBehaviour
 
 
     [ContextMenu("ReduceOxygen")]
-    public void ReduceOxygen()
+    public void ReduceOxygen(float currentOxygenValue)
     {
-        NPCsOxygenLeft--;
+        NPCsOxygenLeft = (int)(currentOxygenValue / PlayerOxygen.MaxLevels * 100);
         NPCsOxygenDisplay.text = NPCsOxygenLeft.ToString() + "%";
         NPCsOxygenAnimator.SetBool("IsRunningOut", NPCsOxygenLeft <= ColorThresholdPercent);
 
