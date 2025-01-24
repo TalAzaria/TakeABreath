@@ -16,6 +16,10 @@ public class NPCLogic : MonoBehaviour
 
     private int NpcCountStart;
 
+    public float wobbleStrength = 0.25f;
+    public float wobbleSpeed = 1.5f;
+
+
     private void Start()
     {
         surface = Surface.Instance;
@@ -38,7 +42,17 @@ public class NPCLogic : MonoBehaviour
         {
             DropOneNPC();
         }
+
+        for (int i = 0; i < npcs.Count; i++)
+        {
+            GameObject npc = npcs[i];
+            if (npc != null)
+            {
+                WobbleNPC(npc, i);
+            }
+        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -127,6 +141,25 @@ public class NPCLogic : MonoBehaviour
             Transform slot = npcSlots[i];
             npcs[i].transform.position = slot.position;
             npcs[i].transform.localPosition = Vector3.zero;
+        }
+    }
+
+    private void WobbleNPC(GameObject npc, int npcIndex)
+    {
+        Transform npcTransform = npc.transform;
+        Transform slotTransform = npcSlots[npcIndex];
+
+        Vector2 playerMovement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        if (playerMovement.magnitude > 0.1f)
+        {
+            float wobbleAmount = Mathf.Sin(Time.time * wobbleSpeed + npcIndex) * wobbleStrength;
+            Vector3 wobblePosition = slotTransform.position + new Vector3(wobbleAmount, wobbleAmount, 0);
+            npcTransform.position = Vector3.Lerp(npcTransform.position, wobblePosition, Time.deltaTime * wobbleSpeed);
+        }
+        else
+        {
+            npcTransform.position = Vector3.Lerp(npcTransform.position, slotTransform.position, Time.deltaTime * wobbleSpeed);
         }
     }
 }
