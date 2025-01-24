@@ -4635,7 +4635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3030704561219814489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5248,6 +5248,7 @@ MonoBehaviour:
   OxygenOkColor: {r: 0, g: 1, b: 0.9882353, a: 1}
   OxygenRunningOutColor: {r: 1, g: 0, b: 0, a: 1}
   PlayerOxygen: {fileID: 0}
+  EndgamePopup: {fileID: 8557038015686018869}
 --- !u!1 &8610246889328122221
 GameObject:
   m_ObjectHideFlags: 0

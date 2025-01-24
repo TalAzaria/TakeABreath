@@ -22,7 +22,7 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 0;
         Debug.Log("game over");
-        Endgame.Instance.OnEndgame();
+        MainUI.Instance.OnEndgame();
     }
 
     public void RestartLevel()

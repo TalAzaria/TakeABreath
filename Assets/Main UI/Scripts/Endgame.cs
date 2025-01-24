@@ -7,17 +7,9 @@ using TMPro;
 
 public class Endgame : MonoBehaviour
 {
-    public static Endgame Instance = null;
     [SerializeField] private NpcsManager NpcManager;
     [SerializeField] private List<TextMeshProUGUI> RescuedTextDisplays = new List<TextMeshProUGUI>();
     [SerializeField] private List<TextMeshProUGUI> DrownedTextDisplays = new List<TextMeshProUGUI>();
-
-
-    private void Awake()
-    {
-        Instance = this;
-        gameObject.SetActive(false);
-    }
 
 
     [ContextMenu("OnEndgame")]
