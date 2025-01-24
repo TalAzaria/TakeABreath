@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
 {
-    public GameOverManager gameOverManager;
-
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
 
@@ -116,23 +114,14 @@ public class NPCLogic : MonoBehaviour
 
     private void OnNpcDied(GameObject @object)
     {
-        
         @object.transform.SetParent(null);
-        @object.GetComponent<CapsuleCollider2D>().enabled = false;
-        @object.GetComponent<SpriteRenderer>().color = Color.red;
+        //@object.GetComponent<CapsuleCollider2D>().enabled = false;
+        //@object.GetComponent<SpriteRenderer>().color = Color.red;
         npcs.Remove(@object);
         deadNps.Add(@object);
 
         RepositionNPCs();
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
-        if (deadNps.Count == NpcCountStart)
-        {
-            Debug.Log("All NPCs are dead. Game Over!");
-            if (gameOverManager != null)
-            {
-                gameOverManager.EndGame();
-            }
-        }
     }
 
     private void RepositionNPCs()
