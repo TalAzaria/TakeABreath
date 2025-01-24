@@ -5,22 +5,38 @@ using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
 {
+    public GameOverManager gameOverManager;
+
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
-    public Vector2 baseOffset = new Vector2(1.0f, 0);
-    private float spacing = 0.6f;
+
     public List<GameObject> npcs = new List<GameObject>();
+    public List<GameObject> deadNps = new List<GameObject>();
+
+    private Transform[] npcSlots;
     public Surface surface;
+    bool isDelay = false;
+
+    private int NpcCountStart;
+
     private void Start()
     {
         surface = Surface.Instance;
         surface.OnReachedSurface += OnReachSurface;
         playerTransform = this.transform;
+
+        npcSlots = new Transform[4];
+        npcSlots[0] = playerTransform.Find("NpcHold/Left/1");
+        npcSlots[1] = playerTransform.Find("NpcHold/Left/2");
+        npcSlots[2] = playerTransform.Find("NpcHold/Right/3");
+        npcSlots[3] = playerTransform.Find("NpcHold/Right/4");
+        isDelay = false;
+
+        NpcCountStart = npcs.Count;
     }
 
     private void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.Space) && npcs.Count > 0)
         {
             DropOneNPC();
@@ -31,41 +47,45 @@ public class NPCLogic : MonoBehaviour
     {
         if (collision.CompareTag("NPC"))
         {
-            collision.transform.SetParent(playerTransform);
-
-            int attachedCount = playerTransform.childCount - 1;
-            Vector2 offset = new Vector2(baseOffset.x + (attachedCount * spacing), baseOffset.y);
-            collision.transform.localPosition = offset;
-
-            npcs.Add(collision.gameObject);
-            collision.GetComponent<CreatureOxygen>().OnDepleted += OnNpcDied;
-            this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
+            if (npcs.Count < npcSlots.Length && npcSlots[npcs.Count] != null && !isDelay)
+            {
+                Transform slot = npcSlots[npcs.Count];
+                collision.transform.SetParent(slot);
+                collision.transform.localPosition = Vector3.zero;
+                npcs.Add(collision.gameObject);
+                collision.GetComponent<CreatureOxygen>().OnDepleted += OnNpcDied;
+                this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
+                isDelay = true;
+                StartCoroutine(EnableTakingMorePlayersAfterDelay());
+            }
         }
     }
+
+
     private void DropOneNPC()
     {
-       
-            GameObject npcToDrop = npcs[npcs.Count - 1];
+        GameObject npcToDrop = npcs[npcs.Count - 1];
+        Transform npcSlot = npcSlots[npcs.Count - 1];
+        npcToDrop.transform.SetParent(null);
+        npcToDrop.transform.position = npcSlot.position + Vector3.down * 1.3f;
 
-            npcToDrop.transform.SetParent(null);
+        Collider2D npcCollider = npcToDrop.GetComponent<Collider2D>();
+        if (npcCollider != null)
+        {
+            npcCollider.enabled = false;
+            StartCoroutine(EnableNpcColliderAfterDelay(npcCollider, 2f));
+        }
 
-            npcToDrop.transform.position = playerTransform.position + Vector3.right * 2f;
-            Collider2D npcCollider = npcToDrop.GetComponent<Collider2D>();
-            if (npcCollider != null)
-            {
-                npcCollider.enabled = false;
-                StartCoroutine(EnableNpcColliderAfterDelay(npcCollider, 2f)); 
-            }
+        npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
 
-            npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
+        npcs.RemoveAt(npcs.Count - 1);
+        this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
 
-            npcs.RemoveAt(npcs.Count - 1);
+        // Debug.Log($"Dropped NPC. Remaining NPCs: {npcs.Count}");
+        Debug.Log("slots " + npcs.Count);
 
-            this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
-
-            Debug.Log($"Dropped NPC Remaining NPCs: {npcs.Count}");
-        
     }
+
     private IEnumerator EnableNpcColliderAfterDelay(Collider2D collider, float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -74,13 +94,18 @@ public class NPCLogic : MonoBehaviour
             collider.enabled = true;
         }
     }
+    private IEnumerator EnableTakingMorePlayersAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isDelay = false;
+    }
 
     private void OnReachSurface()
     {
-        if (npcs.Count>0)
+        if (npcs.Count > 0)
         {
             OnReachSurfaceWithNpc?.Invoke(npcs.Count);
-            for (int i = npcs.Count-1; i >= 0 ; i--)
+            for (int i = npcs.Count - 1; i >= 0; i--)
             {
                 GameObject npc = npcs[i];
                 DropOneNPC();
@@ -88,20 +113,34 @@ public class NPCLogic : MonoBehaviour
             }
         }
     }
-   
+
     private void OnNpcDied(GameObject @object)
     {
         @object.transform.SetParent(null);
         @object.GetComponent<CapsuleCollider2D>().enabled = false;
         @object.GetComponent<SpriteRenderer>().color = Color.red;
         npcs.Remove(@object);
+        deadNps.Add(@object);
 
-        for (int i = 0; i < npcs.Count; i++)
-        {
-            Vector2 offset = new Vector2(baseOffset.x + (i * spacing), baseOffset.y);
-            npcs[i].transform.localPosition = offset;
-        }
+        RepositionNPCs();
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
+        if (deadNps.Count == NpcCountStart)
+        {
+            Debug.Log("All NPCs are dead. Game Over!");
+            if (gameOverManager != null)
+            {
+                gameOverManager.TriggerGameOver();
+            }
+        }
     }
 
+    private void RepositionNPCs()
+    {
+        for (int i = 0; i < npcs.Count; i++)
+        {
+            Transform slot = npcSlots[i];
+            npcs[i].transform.position = slot.position;
+            npcs[i].transform.localPosition = Vector3.zero;
+        }
+    }
 }

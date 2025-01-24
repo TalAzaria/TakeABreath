@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BubbleLogic : MonoBehaviour
 {
-
     [SerializeField] private float startingOxygen = 100f;
     [SerializeField]  private float oxygenInsideBubble;
     public float oxygenDepletionRate = 1f;
@@ -48,16 +47,26 @@ public class BubbleLogic : MonoBehaviour
                 playerOxygen.changeRatePerSecond = 0;
                 playerOxygen.Levels += oxygenBoostRate;
             }
-
-            foreach (GameObject npc in npcs)
+            if(npcs.Count > 0)
             {
-                CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
-                npcOxygen.changeRatePerSecond = 0;
-                npcOxygen.Levels += oxygenBoostRate;
+                foreach (GameObject npc in npcs)
+                {
+                    CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
+                    npcOxygen.changeRatePerSecond = 0;
+                    npcOxygen.Levels += oxygenBoostRate;
+                }
+
+                oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime * npcs.Count;
+                transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+            }
+            else
+            {
+                oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
+                transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
             }
 
-            oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
-            transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+
+
 
             if (oxygenInsideBubble <= minimumSize)
             {
