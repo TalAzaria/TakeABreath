@@ -11,11 +11,16 @@ public class NPCLogic : MonoBehaviour
     private float spacing = 0.6f;
     public List<GameObject> npcs = new List<GameObject>();
     public Surface surface;
+    public NPCVisual Visual;
+
+
+
     private void Start()
     {
         surface = Surface.Instance;
         surface.OnReachedSurface += OnReachSurface;
         playerTransform = this.transform;
+        Visual.IsAlive = true;
     }
 
     private void Update()
@@ -91,6 +96,7 @@ public class NPCLogic : MonoBehaviour
    
     private void OnNpcDied(GameObject @object)
     {
+        Visual.IsAlive = false;
         @object.transform.SetParent(null);
         @object.GetComponent<CapsuleCollider2D>().enabled = false;
         @object.GetComponent<SpriteRenderer>().color = Color.red;
