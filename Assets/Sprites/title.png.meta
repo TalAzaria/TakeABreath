@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 307252c1ab8195841afa22044c02c4c0
+guid: 245b4f949ab16594ba101afed153e435
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5551047795832300603
-    second: shipwreck_0
+      213: 4369572136041557648
+    second: title_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shipwreck_0
+      name: title_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 126
-        width: 830
-        height: 381
+        x: 0
+        y: 0
+        width: 781
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b34acc14f88490d40800000000000000
-      internalID: 5551047795832300603
+      spriteID: 09ea33de4b6d3ac30800000000000000
+      internalID: 4369572136041557648
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      shipwreck_0: 5551047795832300603
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 307252c1ab8195841afa22044c02c4c0
+guid: 93aae7406903918488b397d6b5fd7091
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5551047795832300603
-    second: shipwreck_0
+      213: -4032481707582436298
+    second: boat_0
+  - first:
+      213: -936671485401084529
+    second: boat_1
+  - first:
+      213: 7540364722606942347
+    second: boat_2
+  - first:
+      213: 7877383918422554417
+    second: boat_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shipwreck_0
+      name: boat_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 126
-        width: 830
-        height: 381
+        x: 668
+        y: 392
+        width: 10
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b34acc14f88490d40800000000000000
-      internalID: 5551047795832300603
+      spriteID: 63cc940804fb908c0800000000000000
+      internalID: -4032481707582436298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_1
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 398
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d4e692f364003f0800000000000000
+      internalID: -936671485401084529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 999
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88afdfb3c1c4a860800000000000000
+      internalID: 7540364722606942347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boat_3
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 390
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13773f800f6125d60800000000000000
+      internalID: 7877383918422554417
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      shipwreck_0: 5551047795832300603
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

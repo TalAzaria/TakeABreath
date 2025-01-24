@@ -1,40 +1,52 @@
 fileFormatVersion: 2
-guid: 5e378159ccb63714b8b8898e3b12d20b
+guid: d064078651a305d429d2d2c21427cabc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9163505371856050565
-    second: WaterPlant2Spritesheet_0
+      213: -7270680871343916861
+    second: PuppiesSpritesheet_0
   - first:
-      213: 4001812982406771651
-    second: WaterPlant2Spritesheet_1
+      213: 392880828098301410
+    second: PuppiesSpritesheet_1
   - first:
-      213: -7479417963408143404
-    second: WaterPlant2Spritesheet_2
+      213: -8499216678851324917
+    second: PuppiesSpritesheet_2
   - first:
-      213: -9073830086690191025
-    second: WaterPlant2Spritesheet_3
+      213: -5017248705549013781
+    second: PuppiesSpritesheet_3
   - first:
-      213: 6709100324946903224
-    second: WaterPlant2Spritesheet_4
+      213: 1638563468208850532
+    second: PuppiesSpritesheet_4
   - first:
-      213: 4972793267277308812
-    second: WaterPlant2Spritesheet_5
+      213: -7212676505807341973
+    second: PuppiesSpritesheet_5
   - first:
-      213: -3908280289049481037
-    second: WaterPlant2Spritesheet_6
+      213: 7122456462451144502
+    second: PuppiesSpritesheet_6
   - first:
-      213: 5735147637425449586
-    second: WaterPlant2Spritesheet_7
+      213: 4911335384413395727
+    second: PuppiesSpritesheet_7
   - first:
-      213: -5758630266323693215
-    second: WaterPlant2Spritesheet_8
+      213: 2592958551377252392
+    second: PuppiesSpritesheet_8
   - first:
-      213: 5505396586417402713
-    second: WaterPlant2Spritesheet_9
+      213: 5097730445088777737
+    second: PuppiesSpritesheet_9
   - first:
-      213: -6955263433985773282
-    second: WaterPlant2Spritesheet_10
+      213: 2074662213109561011
+    second: PuppiesSpritesheet_10
+  - first:
+      213: -2473862311688530840
+    second: PuppiesSpritesheet_11
+  - first:
+      213: -9194335354889120637
+    second: PuppiesSpritesheet_12
+  - first:
+      213: -870375824446402913
+    second: PuppiesSpritesheet_13
+  - first:
+      213: -8867166174682582854
+    second: PuppiesSpritesheet_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,30 +138,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_0
+      name: PuppiesSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 39
-        width: 107
-        height: 157
+        x: 54
+        y: 2082
+        width: 422
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5891ddad59f4b2f70800000000000000
-      internalID: 9163505371856050565
+      spriteID: 3c8715ce44a591b90800000000000000
+      internalID: -7270680871343916861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_1
+      name: PuppiesSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 168
-        y: 41
-        width: 140
-        height: 439
+        x: 579
+        y: 2307
+        width: 8
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c3f6e974bb498730800000000000000
-      internalID: 4001812982406771651
+      spriteID: 2ed4cd5180bc37500800000000000000
+      internalID: 392880828098301410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_2
+      name: PuppiesSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 297
-        y: 37
-        width: 105
-        height: 131
+        x: 580
+        y: 2082
+        width: 409
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4dbc16c6df4c33890800000000000000
-      internalID: -7479417963408143404
+      spriteID: b04ddfb1677bc0a80800000000000000
+      internalID: -8499216678851324917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_3
+      name: PuppiesSpritesheet_3
       rect:
         serializedVersion: 2
-        x: 667
-        y: 39
-        width: 83
-        height: 157
+        x: 54
+        y: 1570
+        width: 422
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4944928c97431280800000000000000
-      internalID: -9073830086690191025
+      spriteID: bec66f382e62f5ab0800000000000000
+      internalID: -5017248705549013781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_4
+      name: PuppiesSpritesheet_4
       rect:
         serializedVersion: 2
-        x: 706
-        y: 43
-        width: 133
-        height: 440
+        x: 579
+        y: 1795
+        width: 8
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b00beef2338b1d50800000000000000
-      internalID: 6709100324946903224
+      spriteID: 4664588fac85db610800000000000000
+      internalID: 1638563468208850532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_5
+      name: PuppiesSpritesheet_5
       rect:
         serializedVersion: 2
-        x: 804
-        y: 37
-        width: 110
-        height: 131
+        x: 580
+        y: 1570
+        width: 409
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c83a48d2129e20540800000000000000
-      internalID: 4972793267277308812
+      spriteID: b663c8faeec67eb90800000000000000
+      internalID: -7212676505807341973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_6
+      name: PuppiesSpritesheet_6
       rect:
         serializedVersion: 2
-        x: 1178
-        y: 39
-        width: 84
-        height: 155
+        x: 54
+        y: 1058
+        width: 422
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b07b88b8cff2c9c0800000000000000
-      internalID: -3908280289049481037
+      spriteID: 637f59c8a6c08d260800000000000000
+      internalID: 7122456462451144502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_7
+      name: PuppiesSpritesheet_7
       rect:
         serializedVersion: 2
-        x: 1206
-        y: 37
-        width: 220
-        height: 439
+        x: 579
+        y: 1283
+        width: 8
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,20 +311,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27a2a2fd366579f40800000000000000
-      internalID: 5735147637425449586
+      spriteID: f0b54c0c281982440800000000000000
+      internalID: 4911335384413395727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_8
+      name: PuppiesSpritesheet_8
       rect:
         serializedVersion: 2
-        x: 1691
-        y: 39
-        width: 83
-        height: 157
+        x: 580
+        y: 1058
+        width: 409
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16196f6884c3510b0800000000000000
-      internalID: -5758630266323693215
+      spriteID: 820172c701a0cf320800000000000000
+      internalID: 2592958551377252392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_9
+      name: PuppiesSpritesheet_9
       rect:
         serializedVersion: 2
-        x: 1730
-        y: 43
-        width: 133
-        height: 440
+        x: 67
+        y: 771
+        width: 8
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 953be09c609176c40800000000000000
-      internalID: 5505396586417402713
+      spriteID: 906e534b4d6ceb640800000000000000
+      internalID: 5097730445088777737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPlant2Spritesheet_10
+      name: PuppiesSpritesheet_10
       rect:
         serializedVersion: 2
-        x: 1828
-        y: 37
-        width: 110
-        height: 131
+        x: 68
+        y: 546
+        width: 414
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,8 +377,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e11b302e1c0f97f90800000000000000
-      internalID: -6955263433985773282
+      spriteID: 3b632517a4eaacc10800000000000000
+      internalID: 2074662213109561011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuppiesSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 771
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8641498a5531badd0800000000000000
+      internalID: -2473862311688530840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuppiesSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 546
+        width: 414
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384d40a55b8276080800000000000000
+      internalID: -9194335354889120637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuppiesSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 259
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ec8c29ccdcbe3f0800000000000000
+      internalID: -870375824446402913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PuppiesSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 34
+        width: 414
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab07fa9285f71f480800000000000000
+      internalID: -8867166174682582854
       vertices: []
       indices: 
       edges: []
@@ -397,18 +484,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      WaterPlant2Spritesheet_0: 9163505371856050565
-      WaterPlant2Spritesheet_1: 4001812982406771651
-      WaterPlant2Spritesheet_10: -6955263433985773282
-      WaterPlant2Spritesheet_2: -7479417963408143404
-      WaterPlant2Spritesheet_3: -9073830086690191025
-      WaterPlant2Spritesheet_4: 6709100324946903224
-      WaterPlant2Spritesheet_5: 4972793267277308812
-      WaterPlant2Spritesheet_6: -3908280289049481037
-      WaterPlant2Spritesheet_7: 5735147637425449586
-      WaterPlant2Spritesheet_8: -5758630266323693215
-      WaterPlant2Spritesheet_9: 5505396586417402713
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
