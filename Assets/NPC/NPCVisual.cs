@@ -13,7 +13,7 @@ public enum NPCTypes
     Dog2 = 4,
     Dog3 = 5,
     Duck1 = 6,
-    Duck2 = 7,
+    Duck2 = 7
 }
 
 
