@@ -9,7 +9,6 @@ public class NPCLogic : MonoBehaviour
     private Transform playerTransform;
 
     public List<GameObject> npcs = new List<GameObject>();
-    public List<GameObject> deadNps = new List<GameObject>();
 
     private Transform[] npcSlots;
     public Surface surface;
@@ -112,14 +111,10 @@ public class NPCLogic : MonoBehaviour
         }
     }
 
-    private void OnNpcDied(GameObject @object)
+    private void OnNpcDied(GameObject npc)
     {
-        @object.transform.SetParent(null);
-        //@object.GetComponent<CapsuleCollider2D>().enabled = false;
-        //@object.GetComponent<SpriteRenderer>().color = Color.red;
-        npcs.Remove(@object);
-        deadNps.Add(@object);
-
+        npc.transform.SetParent(null);
+        npcs.Remove(npc);
         RepositionNPCs();
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
     }

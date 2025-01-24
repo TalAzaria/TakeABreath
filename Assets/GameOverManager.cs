@@ -6,11 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
+    public CreatureOxygen playerOxygen;
+
+    private void Start()
+    {
+        playerOxygen.OnDepleted += OnPlayerOxygenDepleted;
+    }
+
+    private void OnPlayerOxygenDepleted(GameObject player)
+    {
+        EndGame();
+    }
+
     public void EndGame()
     {
         Time.timeScale = 0;
         Debug.Log("game over");
-        //gameOverUI.SetActive(true);
     }
 
     public void RestartLevel()

@@ -100,24 +100,15 @@ public class PlayerMovement : MonoBehaviour
                 downwardSpeed = originalDownwardsSpeed;
                 break;
             case 1:
-                // Logic for when there is 1 player
-                Debug.Log("There is 1 npcs.");
-                //moveSpeed = originalMoveSpeed * 0.8f;
                 moveSpeed = 4f;
                 downwardSpeed = 3f;
                 break;
             case 2:
-                // Logic for when there are 2 players
-                Debug.Log("There are 2 npcs."); 
-                //moveSpeed = originalMoveSpeed * 0.6f; 
                 moveSpeed = 3f;
                 downwardSpeed = 4f;
                 break;
 
             case 3:
-                // Logic for when there are 3 players
-                Debug.Log("There are 3 npcs.");
-                //moveSpeed = originalMoveSpeed * 0.4f; 
                 moveSpeed = 2f;
                 downwardSpeed = 5f;
                 break;

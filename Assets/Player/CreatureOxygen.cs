@@ -32,8 +32,6 @@ public class CreatureOxygen : MonoBehaviour
                 {
                     OnDepleted?.Invoke(this.gameObject);
                     OnDepleted = null;
-                    gameOverManager?.EndGame();
-                    gameOverManager = null;
                 }
             }
         }

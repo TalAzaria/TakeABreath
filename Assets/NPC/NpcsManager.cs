@@ -21,6 +21,7 @@ public class NpcsManager : MonoBehaviour
     {
         npc.GetComponent<CapsuleCollider2D>().enabled = false;
         npc.GetComponent<SpriteRenderer>().color = Color.red;
+        npcOxygenList.Remove(npc.GetComponent<CreatureOxygen>());
         if (npcOxygenList.Count == 0)
         {
             Debug.Log("All NPCs are dead. Game Over!");
