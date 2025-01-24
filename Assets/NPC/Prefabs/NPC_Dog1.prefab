@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: NPCType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: DeadSprite
       value: 
       objectReference: {fileID: 2074662213109561011, guid: d064078651a305d429d2d2c21427cabc, type: 3}
