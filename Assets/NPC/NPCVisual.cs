@@ -4,8 +4,23 @@ using System.Collections.Generic;
 
 
 
+public enum NPCTypes
+{
+    Cat1 = 0,
+    Cat2 = 1,
+    Cat3 = 2,
+    Dog1 = 3,
+    Dog2 = 4,
+    Dog3 = 5,
+    Duck1 = 6,
+    Duck2 = 7,
+}
+
+
+
 public class NPCVisual : MonoBehaviour
 {
+    public NPCTypes NPCType = NPCTypes.Cat1;
     [SerializeField] private SpriteRenderer SpriteHolder;
     [SerializeField] private Sprite AliveSprite1;
     [SerializeField] private Sprite AliveSprite2;
