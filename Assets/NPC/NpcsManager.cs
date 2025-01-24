@@ -39,6 +39,9 @@ public class NpcsManager : MonoBehaviour
         npcOxygenList.Remove(creature);
         if (npcOxygenList.Count == 0)
             gameOverManager?.EndGame();
+
+        NPCVisual npcVisual = npc.GetComponent<NPCVisual>();
+        npcVisual.IsAlive = false;
     }
 
     public void OnNPCRescued(GameObject npc)
