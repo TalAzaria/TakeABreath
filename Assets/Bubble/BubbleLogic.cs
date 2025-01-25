@@ -25,21 +25,19 @@ public class BubbleLogic : MonoBehaviour
     private void Awake()
     {
         originalScale = this.transform.localScale;
+        oxygenInsideBubble = startingOxygen;
     }
 
     private void Start()
     {
-        oxygenInsideBubble = startingOxygen;
 
         playerOxygen = Player.GetComponent<CreatureOxygen>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
+        if (collision.CompareTag("Player") && BubbleAnimator)
             BubbleAnimator.SetBool("IsScaling", true);
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -82,7 +80,8 @@ public class BubbleLogic : MonoBehaviour
         if (canShrink && oxygenInsideBubble <= minimumSize)
         {
             Destroy(gameObject);
-            BubbleAnimator.SetBool("IsScaling", false);
+            if (BubbleAnimator) 
+                BubbleAnimator.SetBool("IsScaling", false);
 
         }
     }
@@ -104,10 +103,11 @@ public class BubbleLogic : MonoBehaviour
                 }
             }
 
-            BubbleAnimator.SetBool("IsScaling", false);
+            if (BubbleAnimator)
+                BubbleAnimator.SetBool("IsScaling", false);
         }
 
-        if (collision.CompareTag("NPC"))
+        if (collision.CompareTag("NPC") && BubbleAnimator)
         {
             BubbleAnimator.SetBool("IsScaling", false);
         }
@@ -116,7 +116,7 @@ public class BubbleLogic : MonoBehaviour
     public void npcIsInsideLogic(GameObject npc)
     {
         CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
-        if (npcOxygen.isHoldingOnNpc == false)
+        if (npcOxygen.isHoldingOnNpc == false && BubbleAnimator)
         {
             npcOxygen.changeRatePerSecond = 0;
             npcOxygen.Levels += oxygenBoostRate;
