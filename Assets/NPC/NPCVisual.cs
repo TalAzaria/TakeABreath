@@ -13,7 +13,9 @@ public enum NPCTypes
     Dog2 = 4,
     Dog3 = 5,
     Duck1 = 6,
-    Duck2 = 7
+    Duck2 = 7,
+    Coral = 8,
+    Plant = 9
 }
 
 
@@ -22,8 +24,8 @@ public class NPCVisual : MonoBehaviour
 {
     public NPCTypes NPCType = NPCTypes.Cat1;
     [SerializeField] private SpriteRenderer SpriteHolder;
-    [SerializeField] private Sprite AliveSprite1;
-    [SerializeField] private Sprite AliveSprite2;
+    private int spriteI = 0;
+    [SerializeField] private Sprite[] AliveSprite;
     [SerializeField] private Sprite DeadSprite;
     [SerializeField] private float SwapInterval = 0.25f;
     [HideInInspector] public bool IsRescued = false;
@@ -39,7 +41,7 @@ public class NPCVisual : MonoBehaviour
         set
         {
             isAlive = value;
-            SpriteHolder.sprite = isAlive ? AliveSprite1 : DeadSprite;
+            SpriteHolder.sprite = isAlive ? AliveSprite[0] : DeadSprite;
         }
     }
 
@@ -57,7 +59,7 @@ public class NPCVisual : MonoBehaviour
 
         if (IsAlive)
         {
-            SpriteHolder.sprite = (SpriteHolder.sprite == AliveSprite1) ? AliveSprite2 : AliveSprite1;
+            SpriteHolder.sprite = AliveSprite[(spriteI++) % AliveSprite.Length];
         }
         else
         {
