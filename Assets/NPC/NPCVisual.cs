@@ -41,7 +41,8 @@ public class NPCVisual : MonoBehaviour
         set
         {
             isAlive = value;
-            SpriteHolder.sprite = isAlive ? AliveSprite[0] : DeadSprite;
+            if (AliveSprite.Length > 0)
+                SpriteHolder.sprite = isAlive ? AliveSprite[0] : DeadSprite;
         }
     }
 
@@ -59,7 +60,8 @@ public class NPCVisual : MonoBehaviour
 
         if (IsAlive)
         {
-            SpriteHolder.sprite = AliveSprite[(spriteI++) % AliveSprite.Length];
+            if (AliveSprite.Length > 0 )
+                SpriteHolder.sprite = AliveSprite[(spriteI++) % AliveSprite.Length];
         }
         else
         {
