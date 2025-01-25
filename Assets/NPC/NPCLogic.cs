@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCLogic : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class NPCLogic : MonoBehaviour
     private GameObject npcInsideBubble;
 
     private CapsuleCollider2D playerCollider;
+
+    public bool isGameOver;
 
     private void Awake()
     {
@@ -65,6 +68,12 @@ public class NPCLogic : MonoBehaviour
         {
             DropOneNPC();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+
 
         if (npcs.Count == 0)
         {

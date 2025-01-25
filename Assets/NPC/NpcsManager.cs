@@ -47,6 +47,18 @@ public class NpcsManager : MonoBehaviour
         NPCVisual npcVisual = npc.GetComponent<NPCVisual>();
         npcVisual.IsAlive = false;
         DeadNPCCounters[(int)(npcVisual.NPCType)]++;
+
+        int counter = 0;
+        foreach (NPCVisual npc1 in NPCVisuals)
+        {
+            if (npc1.IsAlive)
+            {
+                counter++;
+            }
+        }
+        if (counter == 0)
+            gameOverManager?.EndGame();
+
     }
 
     public void OnNPCRescued(GameObject npc)
