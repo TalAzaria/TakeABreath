@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984b362e0f44c59438bd0ac909885afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 8
   drag: 1
   downwardSpeed: 1
   enableDownwardMovement: 1
@@ -438,7 +438,10 @@ MonoBehaviour:
   changeRatePerSecond: -0.5
   MaxLevels: 50
   levels: 0
+  isInsideBubble: 0
   isHoldingOnNpc: 0
+  npcLogic: {fileID: 0}
+  isPlayer: 0
 --- !u!114 &5051585474621179760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +498,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOxygen: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  UI: {fileID: 0}
+  m_OrthographicCamera: {fileID: 0}
+  cameraZoomDuration: 1
+  cameraStartSize: 8
+  cameraEndSize: 14
 --- !u!70 &1258842415317127760
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
