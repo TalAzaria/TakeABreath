@@ -9377,6 +9377,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1039130142881426421, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
+      propertyPath: Damping.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039130142881426421, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
+      propertyPath: Damping.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039130142881426421, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
+      propertyPath: Damping.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4519601897819442622, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1100004
@@ -9411,7 +9423,7 @@ PrefabInstance:
       objectReference: {fileID: 1251364587}
     - target: {fileID: 8844994899727177196, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: -45.371834
+      value: -45.2307
       objectReference: {fileID: 0}
     - target: {fileID: 8844994899727177196, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
