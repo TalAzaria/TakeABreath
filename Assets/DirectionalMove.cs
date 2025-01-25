@@ -24,10 +24,12 @@ public class DirectionalMove : MonoBehaviour
             float targetLerpTime = startingTime + moveRate;
             while (Time.time <= targetLerpTime)
             {
+                print("go up");
                 transform.position = Vector3.Lerp(transform.position, originalPosition + targetPositionOffset, (Time.time - startingTime) / moveRate);
                 yield return 0;
             }
 
+            print("go down");
             startingTime = Time.time;
             targetLerpTime = startingTime + moveRate;
             while (Time.time <= targetLerpTime)
@@ -35,6 +37,8 @@ public class DirectionalMove : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, originalPosition, (Time.time - startingTime) / moveRate);
                 yield return 0;
             }
+            
+            print("now what?");
         }
     }
 }
