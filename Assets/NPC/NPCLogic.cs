@@ -218,7 +218,7 @@ public class NPCLogic : MonoBehaviour
                 {
                     if (collider.TryGetComponent<BubbleLogic>(out BubbleLogic bubbleLogic))
                     {
-                        collider.GetComponent<BubbleLogic>().npcIsInsideLogic(npc.GetComponent<CreatureOxygen>());
+                        collider.GetComponent<BubbleLogic>().npcIsInsideLogic(npc);
                         x = 1;
                     }
 
