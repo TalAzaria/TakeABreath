@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BubbleLogic : MonoBehaviour
 {
+    [SerializeField] private Animator BubbleAnimator;
     [SerializeField] private float startingOxygen = 100f;
     [SerializeField] private float oxygenInsideBubble;
     public float oxygenDepletionRate = 1f;
@@ -37,6 +38,7 @@ public class BubbleLogic : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            BubbleAnimator.SetBool("IsScaling", true);
         }
     }
 
@@ -99,6 +101,8 @@ public class BubbleLogic : MonoBehaviour
                     npcOxygen.SetChangeRateToDefault();
                 }
             }
+
+            BubbleAnimator.SetBool("IsScaling", false);
         }
     }
 

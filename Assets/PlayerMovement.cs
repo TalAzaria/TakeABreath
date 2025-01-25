@@ -104,21 +104,21 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case 1:
                 speedMultiplier = 0.8f;  
-                downwardSpeedMultiplier = 1.5f;  
-                break;
-            case 2:
-                speedMultiplier = 0.6f;  
                 downwardSpeedMultiplier = 2f;  
                 break;
+            case 2:
+                speedMultiplier = 0.65f;  
+                downwardSpeedMultiplier = 3f;  
+                break;
             case 3:
-                speedMultiplier = 0.45f;  
-                downwardSpeedMultiplier = 2.5f;  
+                speedMultiplier = 0.55f;  
+                downwardSpeedMultiplier = 4f;  
                 break;
             default:
                 if (PeopleCount >= maxToHold)
                 {
-                    speedMultiplier = 0.35f; 
-                    downwardSpeedMultiplier = 3f;  
+                    speedMultiplier = 0.5f; 
+                    downwardSpeedMultiplier = 5f;  
                     Debug.Log("Maximum NPCs. Can't move upward");
                 }
                 else
