@@ -52,8 +52,12 @@ public class CreatureOxygen : MonoBehaviour
     private void Start()
     {
         isHoldingOnNpc = false;
+        npcLogic = NPCLogic.Instance;
+
         if (!isPlayer)
-        npcLogic.InsideBubble(this.gameObject);
+        {
+            npcLogic.InsideBubble(this.gameObject);
+        }
     }
 
     public void SetChangeRateToDefault()

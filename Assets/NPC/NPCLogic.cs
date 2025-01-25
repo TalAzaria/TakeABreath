@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class NPCLogic : MonoBehaviour
 {
+    public static NPCLogic Instance;
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
 
@@ -23,6 +24,11 @@ public class NPCLogic : MonoBehaviour
     private GameObject npcInsideBubble;
 
     private CapsuleCollider2D playerCollider;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
