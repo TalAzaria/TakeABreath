@@ -4999,9 +4999,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1362331011780667527, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -431
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846387749518882012, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000024795
+      objectReference: {fileID: 0}
     - target: {fileID: 2846387749518882012, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 3873807443650097030, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_IsActive
@@ -5013,7 +5021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6527132887829838144, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7410967849183604141, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_text
@@ -5027,7 +5035,9 @@ PrefabInstance:
         Tal Azaria - Developer
 
         Hamutal Zered
-        - 2D Artist'
+        - 2D Artist
+
+        Alon Kaplan - Music & SFX'
       objectReference: {fileID: 0}
     - target: {fileID: 7964246302198401495, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_Type

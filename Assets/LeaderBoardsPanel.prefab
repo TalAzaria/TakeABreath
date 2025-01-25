@@ -628,7 +628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00003624, y: -32}
+  m_AnchoredPosition: {x: -0.000024795, y: 32}
   m_SizeDelta: {x: 1547.31, y: 507.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5575310461232564698
@@ -668,7 +668,9 @@ MonoBehaviour:
     Tal Azaria
     - Developer (Bheshekel)
 
-    Hamutal - 2D Artist'
+    Hamutal - 2D Artist
+
+    Alon Kaplan - Music & SFX'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4d12b0cc7af8e64e9504ce284d0d82d, type: 2}
   m_sharedMaterial: {fileID: 1499461584386353381, guid: e4d12b0cc7af8e64e9504ce284d0d82d, type: 2}
