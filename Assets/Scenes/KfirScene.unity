@@ -414,11 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2803764502278466808, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.1
+      value: 17.39
       objectReference: {fileID: 0}
     - target: {fileID: 2803764502278466808, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 2803764502278466808, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: m_LocalPosition.z
@@ -461,12 +461,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
+      propertyPath: levels
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: npcLogic
       value: 
       objectReference: {fileID: 1251364586}
     - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: MaxLevels
-      value: 80
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6069546804671250109, guid: 8ab3665892ccd8246b6b331312564516, type: 3}
       propertyPath: gameOverManager
@@ -4804,7 +4808,8 @@ PrefabInstance:
       value: AirBubble (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1795723415095600406, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
@@ -7685,6 +7690,14 @@ PrefabInstance:
       propertyPath: startDelay
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3893286639265185762, guid: a45f9d6d0bceace438dbfe9e38e18de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.894853
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893286639265185762, guid: a45f9d6d0bceace438dbfe9e38e18de7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3877
+      objectReference: {fileID: 0}
     - target: {fileID: 4179773604761287248, guid: a45f9d6d0bceace438dbfe9e38e18de7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4625283
@@ -9833,6 +9846,18 @@ PrefabInstance:
       propertyPath: pressSpaceToDrop
       value: 
       objectReference: {fileID: 453767856}
+    - target: {fileID: 7321015573123955968, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: levels
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321015573123955968, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: MaxLevels
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321015573123955968, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: changeRatePerSecond
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8197682826138880969, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
       propertyPath: moveSpeed
       value: 6

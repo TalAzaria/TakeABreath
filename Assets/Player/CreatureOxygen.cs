@@ -50,7 +50,7 @@ public class CreatureOxygen : MonoBehaviour
 
     private void Awake()
     {
-        Levels = MaxLevels;
+        Levels = levels;
     }
 
     private void Start()
