@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8e5c1445095824f4f95a77dff1ff4848
+guid: f2e03e337ea722a4ab1346cf99bdaf30
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1249812709641417961
-    second: AirTank_0
+      213: -6953054200495137425
+    second: meter_white_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AirTank_0
+      name: meter_white_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 372
-        height: 512
+        x: 10
+        y: 16
+        width: 105
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e4f1f1a90a385110800000000000000
-      internalID: 1249812709641417961
+      spriteID: f6d13732b0ac18f90800000000000000
+      internalID: -6953054200495137425
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      AirTank_0: 1249812709641417961
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
