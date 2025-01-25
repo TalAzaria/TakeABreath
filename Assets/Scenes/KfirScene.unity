@@ -1664,6 +1664,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+--- !u!1 &453767855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1761667486108800346, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+  m_PrefabInstance: {fileID: 453767854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &469537088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3715,6 +3720,7 @@ MonoBehaviour:
   NPCVisuals: []
   RescuedNPCCounters: 
   DeadNPCCounters: 
+  GameWonScreen: {fileID: 453767855}
 --- !u!1001 &1371352159
 PrefabInstance:
   m_ObjectHideFlags: 0
