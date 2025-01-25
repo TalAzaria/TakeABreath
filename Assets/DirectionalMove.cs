@@ -8,6 +8,7 @@ public class DirectionalMove : MonoBehaviour
     private Vector3 originalPosition;
     [SerializeField] private Vector3 targetPositionOffset;
     [SerializeField] private float moveRate = 1;
+    [SerializeField] private float startDelay = 0;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class DirectionalMove : MonoBehaviour
 
     private IEnumerator Move()
     {
+        yield return new WaitForSeconds(startDelay);
         while (true)
         {
             float startingTime = Time.time;
