@@ -23,6 +23,8 @@ public class Scores : MonoBehaviour
     [SerializeField] private TMP_Text alreadyExistsText;
     [SerializeField] private TMP_Text loadingText;
 
+    public NpcsManager NpcsManager;
+
     private class Score
     {
         public string name;
@@ -211,5 +213,10 @@ public class Scores : MonoBehaviour
             alreadyExistsText.enabled = true;
         }
 
+    }
+
+    public void sumScore(int finalScore)
+    {
+        localScore = finalScore;
     }
 }
