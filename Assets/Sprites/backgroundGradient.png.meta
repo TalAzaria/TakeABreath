@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 37e6a415f6f6125469460a50eadbc7ac
+guid: 7e06eb417c0a34345980fc166a337c90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8439472519248707652
-    second: RocksFourOptions_0
-  - first:
-      213: 6379190018251611576
-    second: RocksFourOptions_1
-  - first:
-      213: -4430944452596154998
-    second: RocksFourOptions_2
-  - first:
-      213: 7069334258380459169
-    second: RocksFourOptions_3
+      213: -8549005035618937228
+    second: backgroundGradient_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RocksFourOptions_0
+      name: backgroundGradient_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 508
-        height: 336
+        width: 960
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbf728e3578f0ea80800000000000000
-      internalID: -8439472519248707652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RocksFourOptions_1
-      rect:
-        serializedVersion: 2
-        x: 558
-        y: 19
-        width: 396
-        height: 317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8bdda90f58f678850800000000000000
-      internalID: 6379190018251611576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RocksFourOptions_2
-      rect:
-        serializedVersion: 2
-        x: 1023
-        y: 8
-        width: 492
-        height: 484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8db48b1f7f1282c0800000000000000
-      internalID: -4430944452596154998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RocksFourOptions_3
-      rect:
-        serializedVersion: 2
-        x: 1535
-        y: 0
-        width: 380
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ac44459d025b1260800000000000000
-      internalID: 7069334258380459169
+      spriteID: 47658e4f635db5980800000000000000
+      internalID: -8549005035618937228
       vertices: []
       indices: 
       edges: []
@@ -222,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      RocksFourOptions_0: -8439472519248707652
-      RocksFourOptions_1: 6379190018251611576
-      RocksFourOptions_2: -4430944452596154998
-      RocksFourOptions_3: 7069334258380459169
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
