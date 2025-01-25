@@ -98,8 +98,8 @@ public class Scores : MonoBehaviour
             ValidateTest(new List<int> { 1, 2, 3 });
             scoresList.Clear();
 
-            //if (areAllTestsPassed)
-                //print("All tests passed!");
+            if (areAllTestsPassed)
+                print("All tests passed!");
         }
     }
 
