@@ -23,19 +23,19 @@ public class GameOverManager : MonoBehaviour
     {
         // Time.timeScale = 0;
         playerMovement = this.GetComponent<PlayerMovement>();
-        playerMovement.enabled = false;
+        //playerMovement.enabled = false;
 
         collisionCollider = this.GetComponent<CapsuleCollider2D>();
-        collisionCollider.enabled = false;
+        //collisionCollider.enabled = false;
 
-        originalPosition = spawnPoint.transform.position;
-        this.transform.position = originalPosition;
+    //    originalPosition = spawnPoint.transform.position;
+     //   this.transform.position = originalPosition;
 
-        StartCoroutine(WibbleAndMoveDownEffect());
+     //   StartCoroutine(WibbleAndMoveDownEffect());
 
         playerOxygen.OnDepleted += OnPlayerOxygenDepleted;
 
-        UI.enabled = false;
+       // UI.enabled = false;
     }
 
     void StartGame()
