@@ -60,10 +60,10 @@ public class GameOverManager : MonoBehaviour
 
     public void EndGame()
     {
-        Time.timeScale = 0;
-        Debug.Log("game over");
         NpcsManager.Instance.OnEndgame();
         MainUI.Instance.OnEndgame();
+        Time.timeScale = 0;
+
     }
 
     public void RestartLevel()
