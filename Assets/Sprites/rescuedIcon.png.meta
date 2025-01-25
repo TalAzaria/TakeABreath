@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44c781795a623d349b9c430841414373
+guid: aeeb5ffe3d0394240879d0901e9d0c38
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -102,19 +102,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -122,12 +109,12 @@ TextureImporter:
       name: rescuedIcon_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 223
-        height: 202
+        x: 0
+        y: 0
+        width: 720
+        height: 215
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,7 +136,7 @@ TextureImporter:
         width: 271
         height: 198
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,7 +158,7 @@ TextureImporter:
         width: 215
         height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89b24132706def744a02e92ec6d8a006
     internalID: 0
     vertices: []
     indices: 
@@ -197,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rescuedIcon_0: -8712503366160828327
+      rescuedIcon_1: -4454659067369650531
+      rescuedIcon_2: -5549400326044007933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
