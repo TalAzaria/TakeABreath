@@ -28,6 +28,8 @@ public class NPCLogic : MonoBehaviour
 
     private CapsuleCollider2D playerCollider;
 
+    public bool isGameOver;
+
     private void Awake()
     {
         Instance = this;
@@ -67,10 +69,11 @@ public class NPCLogic : MonoBehaviour
             DropOneNPC();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
             SceneManager.LoadScene("Main Menu");
         }
+
 
         if (npcs.Count == 0)
         {

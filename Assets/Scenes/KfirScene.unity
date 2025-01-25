@@ -1676,6 +1676,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1628857026862382616}
     - target: {fileID: 8557038015686018869, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+      propertyPath: npcLogic
+      value: 
+      objectReference: {fileID: 1251364586}
+    - target: {fileID: 8557038015686018869, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
       propertyPath: NpcManager
       value: 
       objectReference: {fileID: 1340004293}
