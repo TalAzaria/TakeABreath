@@ -9,6 +9,7 @@ public class NPCLogic : MonoBehaviour
     public static NPCLogic Instance;
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
+<<<<<<< Updated upstream
     public GameObject pressSpaceToDrop;
 
     public List<GameObject> npcs = new List<GameObject>();
