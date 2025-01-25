@@ -12,7 +12,7 @@ public class NpcsManager : MonoBehaviour
     public List<int> RescuedNPCCounters = new List<int>();
     public List<int> DeadNPCCounters = new List<int>();
     private int NpcRescudedLeft = 0;
-
+    public GameObject GameWonScreen;
     private void Awake()
     {
         Instance = this;
@@ -64,6 +64,7 @@ public class NpcsManager : MonoBehaviour
     public void OnGameWon()
     {
         Debug.unityLogger.Log("Game won");
+        GameWonScreen.SetActive(true);
     }
 
 
