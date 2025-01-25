@@ -146,10 +146,10 @@ TextureImporter:
       name: WaterPlant2Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 39
-        width: 107
-        height: 157
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: WaterPlant2Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 168
-        y: 41
-        width: 140
-        height: 439
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: WaterPlant2Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 297
-        y: 37
-        width: 105
-        height: 131
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: WaterPlant2Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 667
-        y: 39
-        width: 83
-        height: 157
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,165 +230,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 706
-        y: 43
-        width: 133
-        height: 440
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b00beef2338b1d50800000000000000
-      internalID: 6709100324946903224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 804
-        y: 37
-        width: 110
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c83a48d2129e20540800000000000000
-      internalID: 4972793267277308812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 1178
-        y: 39
-        width: 84
-        height: 155
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b07b88b8cff2c9c0800000000000000
-      internalID: -3908280289049481037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 1206
-        y: 37
-        width: 220
-        height: 439
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27a2a2fd366579f40800000000000000
-      internalID: 5735147637425449586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 1691
-        y: 39
-        width: 83
-        height: 157
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16196f6884c3510b0800000000000000
-      internalID: -5758630266323693215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 1730
-        y: 43
-        width: 133
-        height: 440
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 953be09c609176c40800000000000000
-      internalID: 5505396586417402713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant2Spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 1828
-        y: 37
-        width: 110
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e11b302e1c0f97f90800000000000000
-      internalID: -6955263433985773282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 03b867e587a22474f87c3d559da6831c
     internalID: 0
     vertices: []
     indices: 
@@ -400,15 +246,8 @@ TextureImporter:
     nameFileIdTable:
       WaterPlant2Spritesheet_0: 9163505371856050565
       WaterPlant2Spritesheet_1: 4001812982406771651
-      WaterPlant2Spritesheet_10: -6955263433985773282
       WaterPlant2Spritesheet_2: -7479417963408143404
       WaterPlant2Spritesheet_3: -9073830086690191025
-      WaterPlant2Spritesheet_4: 6709100324946903224
-      WaterPlant2Spritesheet_5: 4972793267277308812
-      WaterPlant2Spritesheet_6: -3908280289049481037
-      WaterPlant2Spritesheet_7: 5735147637425449586
-      WaterPlant2Spritesheet_8: -5758630266323693215
-      WaterPlant2Spritesheet_9: 5505396586417402713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
