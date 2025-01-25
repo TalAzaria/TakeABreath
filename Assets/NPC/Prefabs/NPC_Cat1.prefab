@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: AliveSprite2
       value: 
       objectReference: {fileID: -8518091727030039804, guid: b9f5d394c1b0a1d42ae1d7892f2b3a95, type: 3}
+    - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: AliveSprite.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: 'AliveSprite.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7600453807599584779, guid: b9f5d394c1b0a1d42ae1d7892f2b3a95, type: 3}
+    - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
+      propertyPath: 'AliveSprite.Array.data[1]'
+      value: 
+      objectReference: {fileID: -8518091727030039804, guid: b9f5d394c1b0a1d42ae1d7892f2b3a95, type: 3}
     - target: {fileID: 2122670345084329079, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: m_Sprite
       value: 
