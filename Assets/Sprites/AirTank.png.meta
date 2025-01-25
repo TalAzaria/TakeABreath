@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 6d3da55b7c701634db44ea2e3faa3824
+guid: 8e5c1445095824f4f95a77dff1ff4848
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7153240260167478944
-    second: BubbleSpritesheet_0
-  - first:
-      213: 8707590196817841719
-    second: BubbleSpritesheet_1
-  - first:
-      213: 4863127641956834018
-    second: BubbleSpritesheet_2
-  - first:
-      213: -1304648989438042114
-    second: BubbleSpritesheet_3
+      213: 1249812709641417961
+    second: AirTank_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BubbleSpritesheet_0
+      name: AirTank_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 37
-        width: 474
-        height: 459
+        x: 65
+        y: 0
+        width: 372
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ae2e4cfd1a654360800000000000000
-      internalID: 7153240260167478944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BubbleSpritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 37
-        width: 440
-        height: 459
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73e4003362397d870800000000000000
-      internalID: 8707590196817841719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BubbleSpritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 1083
-        y: 37
-        width: 390
-        height: 474
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ea583c03dc4d7340800000000000000
-      internalID: 4863127641956834018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BubbleSpritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1608
-        y: 14
-        width: 355
-        height: 497
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eff19fb08a4f4ede0800000000000000
-      internalID: -1304648989438042114
+      spriteID: 9e4f1f1a90a385110800000000000000
+      internalID: 1249812709641417961
       vertices: []
       indices: 
       edges: []
@@ -222,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BubbleSpritesheet_0: 7153240260167478944
-      BubbleSpritesheet_1: 8707590196817841719
-      BubbleSpritesheet_2: 4863127641956834018
-      BubbleSpritesheet_3: -1304648989438042114
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
