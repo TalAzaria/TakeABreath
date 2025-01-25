@@ -104,6 +104,11 @@ public class BubbleLogic : MonoBehaviour
 
             BubbleAnimator.SetBool("IsScaling", false);
         }
+
+        if (collision.CompareTag("NPC"))
+        {
+            BubbleAnimator.SetBool("IsScaling", false);
+        }
     }
 
     public void npcIsInsideLogic(GameObject npc)
@@ -115,6 +120,7 @@ public class BubbleLogic : MonoBehaviour
             npcOxygen.Levels += oxygenBoostRate;
             oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
             transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+            BubbleAnimator.SetBool("IsScaling", true);
         }
     }
 }
