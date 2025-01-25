@@ -6,7 +6,7 @@ using UnityEngine;
 public class BubbleLogic : MonoBehaviour
 {
     [SerializeField] private float startingOxygen = 100f;
-    [SerializeField]  private float oxygenInsideBubble;
+    [SerializeField] private float oxygenInsideBubble;
     public float oxygenDepletionRate = 1f;
     private float minimumSize = 0.02f;
     public float scalingDown = 5f;
@@ -19,13 +19,14 @@ public class BubbleLogic : MonoBehaviour
 
     public float oxygenBoostRate = 0.5f;
 
+    [SerializeField] private bool canShrink = true; // New variable to control shrinking
+
     private void Start()
     {
         oxygenInsideBubble = startingOxygen;
         originalScale = transform.localScale;
 
         playerOxygen = Player.GetComponent<CreatureOxygen>();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,8 +35,8 @@ public class BubbleLogic : MonoBehaviour
         {
             Debug.Log("Player entered the bubble");
         }
-
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -47,7 +48,8 @@ public class BubbleLogic : MonoBehaviour
                 playerOxygen.changeRatePerSecond = 0;
                 playerOxygen.Levels += oxygenBoostRate;
             }
-            if(npcs.Count > 0)
+
+            if (npcs.Count > 0)
             {
                 foreach (GameObject npc in npcs)
                 {
@@ -56,19 +58,23 @@ public class BubbleLogic : MonoBehaviour
                     npcOxygen.Levels += oxygenBoostRate;
                 }
 
-                oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime * npcs.Count;
-                transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+                if (canShrink) // Check if shrinking is allowed
+                {
+                    oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime * npcs.Count;
+                    transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+                }
             }
             else
             {
-                oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
-                transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+                if (canShrink) // Check if shrinking is allowed
+                {
+                    oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
+                    transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
+                }
             }
-
-
         }
 
-        if (oxygenInsideBubble <= minimumSize)
+        if (canShrink && oxygenInsideBubble <= minimumSize)
         {
             Destroy(gameObject);
         }
@@ -76,7 +82,8 @@ public class BubbleLogic : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")){
+        if (collision.CompareTag("Player"))
+        {
             npcs = Player.GetComponent<NPCLogic>().npcs;
 
             if (playerOxygen != null)
@@ -102,5 +109,4 @@ public class BubbleLogic : MonoBehaviour
             transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
         }
     }
-
 }

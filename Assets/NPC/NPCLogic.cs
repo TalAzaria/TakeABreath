@@ -24,7 +24,7 @@ public class NPCLogic : MonoBehaviour
 
     private bool isInsideBubble = false;
 
-    private CircleCollider2D playerCollider;
+    private CapsuleCollider2D playerCollider;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class NPCLogic : MonoBehaviour
 
         NpcCountStart = npcs.Count;
 
-        playerCollider = GetComponent<CircleCollider2D>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
         if (playerCollider == null)
         {
             Debug.LogError("No BoxCollider2D found on the player object.");
@@ -66,10 +66,9 @@ public class NPCLogic : MonoBehaviour
 
         if (isInsideBubble)
         {
-            insideBubble();
+            InsideBubble();
         }
 
-       // ResizeColliderToFitNPCs();
     }
 
 
@@ -88,6 +87,7 @@ public class NPCLogic : MonoBehaviour
                 this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
                 isDelay = true;
                 StartCoroutine(EnableTakingMorePlayersAfterDelay());
+                ResizeColliderToFitNPCs();
             }
         }
     }
@@ -110,12 +110,15 @@ public class NPCLogic : MonoBehaviour
         npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
         npcToDrop.GetComponent<CreatureOxygen>().isHoldingOnNpc = false;
         npcInsideBubble = npcToDrop;
-        insideBubble();
+        InsideBubble();
 
         npcs.RemoveAt(npcs.Count - 1);
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
 
         // Debug.Log($"Dropped NPC. Remaining NPCs: {npcs.Count}");
+
+        ResizeColliderToFitNPCs();
+
     }
 
     private IEnumerator EnableNpcColliderAfterDelay(Collider2D collider, float delay)
@@ -153,6 +156,7 @@ public class NPCLogic : MonoBehaviour
         npcs.Remove(npc);
         RepositionNPCs();
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
+        ResizeColliderToFitNPCs();
     }
 
     private void RepositionNPCs()
@@ -184,7 +188,7 @@ public class NPCLogic : MonoBehaviour
         }
     }
 
-    public void insideBubble()
+    public void InsideBubble()
     {
         if (npcInsideBubble != null)
         {
@@ -228,22 +232,39 @@ public class NPCLogic : MonoBehaviour
             }
         }
     }
-
     private void ResizeColliderToFitNPCs()
     {
         if (playerCollider == null) return;
+        float baseHeight = playerCollider.size.y;
 
-        Vector2 center = transform.position;
-        float maxDistance = playerCollider.radius;
-        foreach (var npc in npcs)
+        if (npcs.Count == 0)
         {
-            if (npc != null)
+            playerCollider.size = new Vector2(1f, baseHeight);
+            playerCollider.offset = Vector2.zero;
+            return;
+        }
+
+        float leftmost = float.MaxValue;
+        float rightmost = float.MinValue;
+
+        for (int i = 0; i < npcs.Count; i++)
+        {
+            Transform slot = npcSlots[i];
+            if (slot != null)
             {
-                float distance = Vector2.Distance(center, npc.transform.position);
-                maxDistance = Mathf.Max(maxDistance, distance);
+                float relativeX = slot.localPosition.x;
+                leftmost = Mathf.Min(leftmost, relativeX);
+                rightmost = Mathf.Max(rightmost, relativeX);
             }
         }
 
-        playerCollider.radius = maxDistance + 0.5f;
+        float newWidth = rightmost - leftmost + 1.2f;
+        float newCenterX = (leftmost + rightmost) / 2f;
+
+        playerCollider.size = new Vector2(newWidth, baseHeight);
+        playerCollider.offset = new Vector2(newCenterX, 0f);
     }
+
+
+
 }
