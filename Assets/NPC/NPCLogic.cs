@@ -41,10 +41,15 @@ public class NPCLogic : MonoBehaviour
 
         NpcCountStart = npcs.Count;
 
-        playerCollider = GetComponent<CapsuleCollider2D>();
-        if (playerCollider == null)
+        CapsuleCollider2D[] colliders = GetComponents<CapsuleCollider2D>();
+
+        foreach (var collider in colliders)
         {
-            Debug.LogError("No BoxCollider2D found on the player object.");
+            if (collider.isTrigger)
+            {
+                playerCollider = collider;
+                break; 
+            }
         }
     }
 
@@ -235,34 +240,36 @@ public class NPCLogic : MonoBehaviour
     private void ResizeColliderToFitNPCs()
     {
         if (playerCollider == null) return;
-        float baseHeight = playerCollider.size.y;
 
-        if (npcs.Count == 0)
-        {
-            playerCollider.size = new Vector2(1f, baseHeight);
-            playerCollider.offset = Vector2.zero;
-            return;
-        }
 
-        float leftmost = float.MaxValue;
-        float rightmost = float.MinValue;
+            float baseHeight = playerCollider.size.y;
 
-        for (int i = 0; i < npcs.Count; i++)
-        {
-            Transform slot = npcSlots[i];
-            if (slot != null)
+            if (npcs.Count == 0)
             {
-                float relativeX = slot.localPosition.x;
-                leftmost = Mathf.Min(leftmost, relativeX);
-                rightmost = Mathf.Max(rightmost, relativeX);
+                playerCollider.size = new Vector2(1f, baseHeight);
+                playerCollider.offset = Vector2.zero;
+                return;
             }
-        }
 
-        float newWidth = rightmost - leftmost + 1.2f;
-        float newCenterX = (leftmost + rightmost) / 2f;
+            float leftmost = float.MaxValue;
+            float rightmost = float.MinValue;
 
-        playerCollider.size = new Vector2(newWidth, baseHeight);
-        playerCollider.offset = new Vector2(newCenterX, 0f);
+            for (int i = 0; i < npcs.Count; i++)
+            {
+                Transform slot = npcSlots[i];
+                if (slot != null)
+                {
+                    float relativeX = slot.localPosition.x;
+                    leftmost = Mathf.Min(leftmost, relativeX);
+                    rightmost = Mathf.Max(rightmost, relativeX);
+                }
+            }
+
+            float newWidth = rightmost - leftmost + 1.2f;
+            float newCenterX = (leftmost + rightmost) / 2f;
+
+            playerCollider.size = new Vector2(newWidth, baseHeight);
+            playerCollider.offset = new Vector2(newCenterX, 0f);
     }
 
 
