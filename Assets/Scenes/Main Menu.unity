@@ -5078,9 +5078,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2846387749518882012, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -47
+      objectReference: {fileID: 0}
     - target: {fileID: 6527132887829838144, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_Name
       value: CreditsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527132887829838144, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410967849183604141, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
+      propertyPath: m_text
+      value: 'Yevgeny Blinov - The Cannon
+
+        Kfir Sadeh - Developer
+
+        Ori
+        Ayache - Developer
+
+        Tal Azaria - Developer
+
+        Hamutal Zered
+        - 2D Artist'
       objectReference: {fileID: 0}
     - target: {fileID: 8885293092623433737, guid: 5143676932abe6d4eb2c062854a38ea5, type: 3}
       propertyPath: m_Pivot.x
@@ -17064,7 +17086,10 @@ MonoBehaviour:
   changeRatePerSecond: -1
   MaxLevels: 10
   levels: 0
+  isInsideBubble: 0
   isHoldingOnNpc: 0
+  npcLogic: {fileID: 0}
+  isPlayer: 0
 --- !u!1 &6511790067353659755
 GameObject:
   m_ObjectHideFlags: 0
@@ -17390,10 +17415,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCType: 6
   SpriteHolder: {fileID: 8119668152153590146}
-  AliveSprite1: {fileID: -8979848914388145905, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
-  AliveSprite2: {fileID: 9047738895080715150, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
+  AliveSprite: []
   DeadSprite: {fileID: -8813087273381113915, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
   SwapInterval: 0.25
+  IsRescued: 0
 --- !u!224 &8679374307224518385
 RectTransform:
   m_ObjectHideFlags: 0
