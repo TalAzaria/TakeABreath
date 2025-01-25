@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 6d3da55b7c701634db44ea2e3faa3824
+guid: aeeb5ffe3d0394240879d0901e9d0c38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7153240260167478944
-    second: BubbleSpritesheet_0
+      213: -8712503366160828327
+    second: rescuedIcon_0
   - first:
-      213: 8707590196817841719
-    second: BubbleSpritesheet_1
+      213: -4454659067369650531
+    second: rescuedIcon_1
   - first:
-      213: 4863127641956834018
-    second: BubbleSpritesheet_2
-  - first:
-      213: -1304648989438042114
-    second: BubbleSpritesheet_3
+      213: -5549400326044007933
+    second: rescuedIcon_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,106 +102,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BubbleSpritesheet_0
+      name: rescuedIcon_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 37
-        width: 474
-        height: 459
+        x: 0
+        y: 0
+        width: 720
+        height: 215
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ae2e4cfd1a654360800000000000000
-      internalID: 7153240260167478944
+      spriteID: 958b69b6958f61780800000000000000
+      internalID: -8712503366160828327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BubbleSpritesheet_1
+      name: rescuedIcon_1
       rect:
         serializedVersion: 2
-        x: 544
-        y: 37
-        width: 440
-        height: 459
+        x: 229
+        y: 11
+        width: 271
+        height: 198
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73e4003362397d870800000000000000
-      internalID: 8707590196817841719
+      spriteID: d9685f51e2fdd22c0800000000000000
+      internalID: -4454659067369650531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BubbleSpritesheet_2
+      name: rescuedIcon_2
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 37
-        width: 390
-        height: 474
+        x: 501
+        y: 18
+        width: 215
+        height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ea583c03dc4d7340800000000000000
-      internalID: 4863127641956834018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BubbleSpritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1608
-        y: 14
-        width: 355
-        height: 497
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eff19fb08a4f4ede0800000000000000
-      internalID: -1304648989438042114
+      spriteID: 302c5b13ec19cf2b0800000000000000
+      internalID: -5549400326044007933
       vertices: []
       indices: 
       edges: []
@@ -213,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89b24132706def744a02e92ec6d8a006
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BubbleSpritesheet_0: 7153240260167478944
-      BubbleSpritesheet_1: 8707590196817841719
-      BubbleSpritesheet_2: 4863127641956834018
-      BubbleSpritesheet_3: -1304648989438042114
+      rescuedIcon_0: -8712503366160828327
+      rescuedIcon_1: -4454659067369650531
+      rescuedIcon_2: -5549400326044007933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
