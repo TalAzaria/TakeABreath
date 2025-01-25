@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 243
-  m_Sprite: {fileID: -4790628243086358353, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
+  m_Sprite: {fileID: 9163505371856050565, guid: 5e378159ccb63714b8b8898e3b12d20b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2875616457635009699}
   - component: {fileID: 6850107802939226067}
   m_Layer: 0
-  m_Name: Plant
+  m_Name: Plant2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,10 +135,10 @@ MonoBehaviour:
   NPCType: 9
   SpriteHolder: {fileID: 7381057991685159143}
   AliveSprite:
-  - {fileID: -4790628243086358353, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
-  - {fileID: 8754195195242543918, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
-  - {fileID: 8814806026236449208, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
-  - {fileID: -8691270262323600977, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
+  - {fileID: 9163505371856050565, guid: 5e378159ccb63714b8b8898e3b12d20b, type: 3}
+  - {fileID: 4001812982406771651, guid: 5e378159ccb63714b8b8898e3b12d20b, type: 3}
+  - {fileID: -7479417963408143404, guid: 5e378159ccb63714b8b8898e3b12d20b, type: 3}
+  - {fileID: -9073830086690191025, guid: 5e378159ccb63714b8b8898e3b12d20b, type: 3}
   DeadSprite: {fileID: 0}
   SwapInterval: 0.25
   IsRescued: 0
