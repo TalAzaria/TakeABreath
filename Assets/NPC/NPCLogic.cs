@@ -69,7 +69,7 @@ public class NPCLogic : MonoBehaviour
             insideBubble();
         }
 
-        ResizeColliderToFitNPCs();
+       // ResizeColliderToFitNPCs();
     }
 
 
