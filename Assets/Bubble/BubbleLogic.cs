@@ -82,6 +82,8 @@ public class BubbleLogic : MonoBehaviour
         if (canShrink && oxygenInsideBubble <= minimumSize)
         {
             Destroy(gameObject);
+            BubbleAnimator.SetBool("IsScaling", false);
+
         }
     }
 
@@ -121,6 +123,13 @@ public class BubbleLogic : MonoBehaviour
             oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
             transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
             BubbleAnimator.SetBool("IsScaling", true);
+
+            if (canShrink && oxygenInsideBubble <= minimumSize)
+            {
+                Destroy(gameObject);
+                BubbleAnimator.SetBool("IsScaling", false);
+
+            }
         }
     }
 }
