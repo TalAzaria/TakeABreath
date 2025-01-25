@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 243
+  m_SortingOrder: 200
   m_Sprite: {fileID: 2737229878041246044, guid: be52279ad667ca54f9aa631ecab3339d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1.10215, y: 1.10215, z: 1.10215}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 787345329196213382}
@@ -138,5 +138,5 @@ MonoBehaviour:
   - {fileID: 2737229878041246044, guid: be52279ad667ca54f9aa631ecab3339d, type: 3}
   - {fileID: 7946966758185775487, guid: be52279ad667ca54f9aa631ecab3339d, type: 3}
   DeadSprite: {fileID: 0}
-  SwapInterval: 0.25
+  SwapInterval: 0.2
   IsRescued: 0
