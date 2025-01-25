@@ -102,7 +102,8 @@ public class NPCLogic : MonoBehaviour
         GameObject npcToDrop = npcs[npcs.Count - 1];
         Transform npcSlot = npcSlots[npcs.Count - 1];
         npcToDrop.transform.SetParent(null);
-        npcToDrop.transform.position = npcSlot.position + Vector3.down * 1.3f;
+        npcToDrop.transform.position = transform.position + Vector3.down * 1.3f;;
+        //npcToDrop.transform.position = npcSlot.position + Vector3.down * 1.3f;
 
         Collider2D npcCollider = npcToDrop.GetComponent<Collider2D>();
         if (npcCollider != null)
