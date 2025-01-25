@@ -116,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             default:
                 if (PeopleCount >=maxToHold )
                 {
-                    moveSpeed = 0.5f;
+                    moveSpeed = 1f;
                     downwardSpeed = 6f;
                     Debug.Log("Maximum npcs. Can't move upward");
                     
