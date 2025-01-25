@@ -57,12 +57,15 @@ public class NpcsManager : MonoBehaviour
 
     public void OnEndgame()
     {
+
         for (int i = 0; i < NPCVisuals.Count; i++)
         {
             if (!NPCVisuals[i].IsRescued && NPCVisuals[i].IsAlive)
             {
                 OnCreatureOxygenDepleted(NPCVisuals[i].gameObject);
             }
+
         }
+
     }
 }
