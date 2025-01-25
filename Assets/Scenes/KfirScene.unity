@@ -7895,6 +7895,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 9040183096317767898, guid: a45f9d6d0bceace438dbfe9e38e18de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30.262499
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040183096317767898, guid: a45f9d6d0bceace438dbfe9e38e18de7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
