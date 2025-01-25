@@ -62,7 +62,15 @@ public class NpcsManager : MonoBehaviour
         {
             if (!NPCVisuals[i].IsRescued && NPCVisuals[i].IsAlive)
             {
-                OnCreatureOxygenDepleted(NPCVisuals[i].gameObject);
+
+                NPCVisuals[i].GetComponent<CapsuleCollider2D>().enabled = false;
+                CreatureOxygen creature = NPCVisuals[i].GetComponent<CreatureOxygen>();
+                creature.bubblesParticles.Stop();
+                npcOxygenList.Remove(creature);
+
+                NPCVisual npcVisual = NPCVisuals[i].GetComponent<NPCVisual>();
+                npcVisual.IsAlive = false;
+                DeadNPCCounters[(int)(npcVisual.NPCType)]++;
             }
 
         }

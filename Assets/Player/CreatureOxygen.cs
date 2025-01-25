@@ -37,8 +37,12 @@ public class CreatureOxygen : MonoBehaviour
                 levels = value;
                 if(value == 0)
                 {
-                    OnDepleted?.Invoke(this.gameObject);
-                    OnDepleted = null;
+                    if (OnDepleted != null)
+                    {
+                        OnDepleted.Invoke(this.gameObject);
+                        OnDepleted = null;
+
+                    }
                 }
             }
         }
@@ -73,6 +77,7 @@ public class CreatureOxygen : MonoBehaviour
     void Update()
     {
         Levels += changeRatePerSecond * Time.deltaTime;
+        Debug.Log(levels.ToString());
 
         if (this.isInsideBubble && !isPlayer)
         {
