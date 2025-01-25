@@ -9,11 +9,8 @@ public class NPCLogic : MonoBehaviour
     public static NPCLogic Instance;
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
-<<<<<<< Updated upstream
     public GameObject pressSpaceToDrop;
-=======
     public AudioSource MyAudioSource;
->>>>>>> Stashed changes
 
     public List<GameObject> npcs = new List<GameObject>();
 
@@ -103,12 +100,9 @@ public class NPCLogic : MonoBehaviour
                 isDelay = true;
                 StartCoroutine(EnableTakingMorePlayersAfterDelay());
                 ResizeColliderToFitNPCs();
-<<<<<<< Updated upstream
 
                 pressSpaceToDrop.SetActive(true);
-=======
                 MyAudioSource.Play();
->>>>>>> Stashed changes
             }
         }
     }
