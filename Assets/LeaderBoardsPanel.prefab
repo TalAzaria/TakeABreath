@@ -659,14 +659,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Yevgeny Blinov - The Cannon
+  m_text: '
 
     Kfir Sadeh - Developer
 
-    Ori Yiash
-    - Developer
+    Ori Yiash - Developer
 
-    Tal Azaria - Developer (Bheshekel)
+    Tal Azaria
+    - Developer (Bheshekel)
 
     Hamutal - 2D Artist'
   m_isRightToLeft: 0
