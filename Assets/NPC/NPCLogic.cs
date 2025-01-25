@@ -10,6 +10,7 @@ public class NPCLogic : MonoBehaviour
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
     public GameObject pressSpaceToDrop;
+    public AudioSource MyAudioSource;
 
     public List<GameObject> npcs = new List<GameObject>();
 
@@ -101,6 +102,7 @@ public class NPCLogic : MonoBehaviour
                 ResizeColliderToFitNPCs();
 
                 pressSpaceToDrop.SetActive(true);
+                MyAudioSource.Play();
             }
         }
     }

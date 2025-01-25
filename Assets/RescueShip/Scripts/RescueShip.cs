@@ -8,6 +8,7 @@ public class RescueShip : MonoBehaviour
     [SerializeField] Animator RescuedAnimator;
     [SerializeField] TextMeshPro RescuedDisplay;
     [SerializeField] NPCLogic Player;
+    [SerializeField] AudioSource MyAudioSource;
 
 
     private void Start()
@@ -21,5 +22,6 @@ public class RescueShip : MonoBehaviour
         RescuedDisplay.text = "+" + numberOfNPCs.ToString();
         RescuedAnimator.SetTrigger("Rescue");
         MainUI.Instance.PlayerRescuedNPCs(numberOfNPCs);
+        MyAudioSource.Play();
     }
 }
