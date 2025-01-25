@@ -17,7 +17,6 @@ public class GameOverManager : MonoBehaviour
     public Canvas UI;
 
     private float wibbleAmount = 0.3f;
-    private float wibbleDuration = 0.1f;
     private float wibbleSpeed = 2f;
 
     public CinemachineCamera m_OrthographicCamera;
