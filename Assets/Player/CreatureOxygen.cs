@@ -78,7 +78,6 @@ public class CreatureOxygen : MonoBehaviour
         {
             if (this.gameObject != null)
             {
-                Debug.Log(this.gameObject.name);
                 npcLogic.InsideBubble(this.gameObject);
             }
         }
