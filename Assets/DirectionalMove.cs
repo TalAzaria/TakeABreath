@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 public class DirectionalMove : MonoBehaviour
 {
@@ -10,30 +11,30 @@ public class DirectionalMove : MonoBehaviour
 
     private void Start()
     {
+        moveRate *= 5;
         originalPosition = transform.position;
         StartCoroutine(Move());
-        
     }
 
     private IEnumerator Move()
     {
         while (true)
         {
-            float targetLerpTime = Time.time + moveRate / 2;
+            float startingTime = Time.time;
+            float targetLerpTime = startingTime + moveRate;
             while (Time.time <= targetLerpTime)
             {
-                transform.position = Vector3.Lerp(transform.position, originalPosition + targetPositionOffset, Time.time);
+                transform.position = Vector3.Lerp(transform.position, originalPosition + targetPositionOffset, (Time.time - startingTime) / moveRate);
                 yield return 0;
             }
 
-            targetLerpTime = Time.time + moveRate / 2;
+            startingTime = Time.time;
+            targetLerpTime = startingTime + moveRate;
             while (Time.time <= targetLerpTime)
             {
-                transform.position = Vector3.Lerp(transform.position, originalPosition - targetPositionOffset, Time.time);
+                transform.position = Vector3.Lerp(transform.position, originalPosition, (Time.time - startingTime) / moveRate);
                 yield return 0;
             }
-
-            yield return 0;
         }
     }
 }
