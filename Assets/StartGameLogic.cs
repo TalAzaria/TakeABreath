@@ -34,5 +34,10 @@ public class StartGameLogic : MonoBehaviour
         credits.SetActive(false);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 
 }

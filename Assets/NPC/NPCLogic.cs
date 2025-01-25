@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCLogic : MonoBehaviour
 {
@@ -64,6 +65,11 @@ public class NPCLogic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && npcs.Count > 0)
         {
             DropOneNPC();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
         }
 
         if (npcs.Count == 0)
