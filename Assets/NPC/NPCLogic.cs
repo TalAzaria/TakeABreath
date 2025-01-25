@@ -24,6 +24,7 @@ public class NPCLogic : MonoBehaviour
 
     private bool isInsideBubble = false;
 
+    private CircleCollider2D playerCollider;
 
     private void Start()
     {
@@ -39,6 +40,12 @@ public class NPCLogic : MonoBehaviour
         isDelay = false;
 
         NpcCountStart = npcs.Count;
+
+        playerCollider = GetComponent<CircleCollider2D>();
+        if (playerCollider == null)
+        {
+            Debug.LogError("No BoxCollider2D found on the player object.");
+        }
     }
 
     private void Update()
@@ -61,6 +68,8 @@ public class NPCLogic : MonoBehaviour
         {
             insideBubble();
         }
+
+        ResizeColliderToFitNPCs();
     }
 
 
@@ -218,5 +227,23 @@ public class NPCLogic : MonoBehaviour
                 isInsideBubble = false;
             }
         }
+    }
+
+    private void ResizeColliderToFitNPCs()
+    {
+        if (playerCollider == null) return;
+
+        Vector2 center = transform.position;
+        float maxDistance = playerCollider.radius;
+        foreach (var npc in npcs)
+        {
+            if (npc != null)
+            {
+                float distance = Vector2.Distance(center, npc.transform.position);
+                maxDistance = Mathf.Max(maxDistance, distance);
+            }
+        }
+
+        playerCollider.radius = maxDistance + 0.5f;
     }
 }
