@@ -873,6 +873,104 @@ RectTransform:
   m_AnchoredPosition: {x: 670, y: 84.200035}
   m_SizeDelta: {x: 124.58, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &810412481809289529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7540709055802922506}
+  - component: {fileID: 7185444925347742080}
+  - component: {fileID: 3443473479389588247}
+  - component: {fileID: 7914510214293494506}
+  m_Layer: 5
+  m_Name: Vignette Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7540709055802922506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810412481809289529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 883844389740230885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7185444925347742080
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810412481809289529}
+  m_CullTransparentMesh: 1
+--- !u!114 &3443473479389588247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810412481809289529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1254164304766479573, guid: f26c9e3821abb6940a633ab300edf7c2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &7914510214293494506
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810412481809289529}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd66369113a24419e84965622d4f2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &820635400054036491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,6 +5252,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3378152594477053271}
+  - {fileID: 7540709055802922506}
   - {fileID: 3030704561219814489}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5237,16 +5336,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379d1aefec9b810488a4879f05920034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RescuedCount: 0
   RescuedDisplay: {fileID: 8849230847768914211}
   RescuedAnimator: {fileID: 162020804415489157}
   RescuedAnimationDelay: 0.5
-  NPCsOxygenLeft: 100
   NPCsOxygenDisplay: {fileID: 4109074470858544348}
   NPCsOxygenAnimator: {fileID: 8937676026706930455}
   ColorThresholdPercent: 25
   OxygenOkColor: {r: 0, g: 1, b: 0.9882353, a: 1}
   OxygenRunningOutColor: {r: 1, g: 0, b: 0, a: 1}
+  Vignette: {fileID: 7914510214293494506}
   PlayerOxygen: {fileID: 0}
   EndgamePopup: {fileID: 8557038015686018869}
 --- !u!1 &8610246889328122221
