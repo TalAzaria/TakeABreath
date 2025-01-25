@@ -131,10 +131,10 @@ TextureImporter:
       name: DuckSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1565
-        width: 340
-        height: 463
+        x: 105
+        y: 1054
+        width: 338
+        height: 461
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: DuckSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 616
-        y: 1565
-        width: 351
-        height: 470
+        x: 617
+        y: 1054
+        width: 349
+        height: 467
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: DuckSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1053
-        width: 340
-        height: 463
+        x: 105
+        y: 542
+        width: 338
+        height: 461
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: DuckSpritesheet_3
       rect:
         serializedVersion: 2
-        x: 616
-        y: 1053
-        width: 351
-        height: 470
+        x: 617
+        y: 542
+        width: 349
+        height: 467
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       name: DuckSpritesheet_4
       rect:
         serializedVersion: 2
-        x: 104
-        y: 541
-        width: 340
+        x: 98
+        y: 30
+        width: 345
         height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,9 +241,9 @@ TextureImporter:
       name: DuckSpritesheet_5
       rect:
         serializedVersion: 2
-        x: 616
-        y: 541
-        width: 340
+        x: 610
+        y: 30
+        width: 345
         height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 84198a48e8de20846b05439f38ebe4af
     internalID: 0
     vertices: []
     indices: 
