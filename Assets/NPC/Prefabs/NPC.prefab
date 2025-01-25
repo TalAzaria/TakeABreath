@@ -841,6 +841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble Emitter
       objectReference: {fileID: 0}
+    - target: {fileID: 8926249919286205061, guid: 3e8a178fa6b594c4aa92932f200e3d78, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
