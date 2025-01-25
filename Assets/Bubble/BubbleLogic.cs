@@ -37,7 +37,6 @@ public class BubbleLogic : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player entered the bubble");
         }
     }
 
