@@ -31,11 +31,11 @@ PrefabInstance:
     - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: 'AliveSprite.Array.data[0]'
       value: 
-      objectReference: {fileID: 8331325817753894313, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
+      objectReference: {fileID: -8979848914388145905, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
     - target: {fileID: 1956474310615992215, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: 'AliveSprite.Array.data[1]'
       value: 
-      objectReference: {fileID: 628863162758060419, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
+      objectReference: {fileID: 9047738895080715150, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
     - target: {fileID: 2122670345084329079, guid: 18edd2dbe167c6f458a7f5605f438252, type: 3}
       propertyPath: m_Size.x
       value: 3.38
