@@ -22,6 +22,7 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 0;
         Debug.Log("game over");
+        NpcsManager.Instance.OnEndgame();
         MainUI.Instance.OnEndgame();
     }
 

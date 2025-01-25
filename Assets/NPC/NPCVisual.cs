@@ -26,6 +26,7 @@ public class NPCVisual : MonoBehaviour
     [SerializeField] private Sprite AliveSprite2;
     [SerializeField] private Sprite DeadSprite;
     [SerializeField] private float SwapInterval = 0.25f;
+    [HideInInspector] public bool IsRescued = false;
 
 
     bool isAlive = true;
