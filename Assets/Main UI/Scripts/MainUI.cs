@@ -17,7 +17,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] int ColorThresholdPercent = 25;
     [SerializeField] Color OxygenOkColor;
     [SerializeField] Color OxygenRunningOutColor;
-    [SerializeField] CreatureOxygen PlayerOxygen;
+    public CreatureOxygen PlayerOxygen;
     [SerializeField] Endgame EndgamePopup;
 
 
