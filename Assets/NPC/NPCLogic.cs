@@ -22,8 +22,6 @@ public class NPCLogic : MonoBehaviour
 
     private GameObject npcInsideBubble;
 
-    private bool isInsideBubble = false;
-
     private CapsuleCollider2D playerCollider;
 
     private void Start()
@@ -69,11 +67,6 @@ public class NPCLogic : MonoBehaviour
             }
         }
 
-        if (isInsideBubble)
-        {
-            InsideBubble();
-        }
-
     }
 
 
@@ -115,7 +108,7 @@ public class NPCLogic : MonoBehaviour
         npcToDrop.GetComponent<CreatureOxygen>().OnDepleted -= OnNpcDied;
         npcToDrop.GetComponent<CreatureOxygen>().isHoldingOnNpc = false;
         npcInsideBubble = npcToDrop;
-        InsideBubble();
+        InsideBubble(npcInsideBubble);
 
         npcs.RemoveAt(npcs.Count - 1);
         this.GetComponent<PlayerMovement>().OnCollectedChange(npcs.Count);
@@ -193,18 +186,17 @@ public class NPCLogic : MonoBehaviour
         }
     }
 
-    public void InsideBubble()
+    public void InsideBubble(GameObject npc)
     {
-        if (npcInsideBubble != null)
+        if (npc != null)
         {
-            CapsuleCollider2D capsule = npcInsideBubble.GetComponent<CapsuleCollider2D>();
+            CapsuleCollider2D capsule = npc.GetComponent<CapsuleCollider2D>();
             if (capsule == null)
             {
                 Debug.LogError("No CapsuleCollider2D attached to this NPC.");
                 return;
             }
 
-            // Check for overlaps
             Collider2D[] overlappingColliders = Physics2D.OverlapCapsuleAll(
                 capsule.bounds.center,
                 capsule.size,
@@ -218,9 +210,9 @@ public class NPCLogic : MonoBehaviour
             {
                 if (collider != capsule)
                 {
-                    if (collider.name == "AirBubble")
+                    if (collider.TryGetComponent<BubbleLogic>(out BubbleLogic bubbleLogic))
                     {
-                        collider.GetComponent<BubbleLogic>().npcIsInsideLogic(this.GetComponent<CreatureOxygen>());
+                        collider.GetComponent<BubbleLogic>().npcIsInsideLogic(npc.GetComponent<CreatureOxygen>());
                         x = 1;
                     }
 
@@ -229,11 +221,11 @@ public class NPCLogic : MonoBehaviour
 
             if (x == 1)
             {
-                isInsideBubble = true;
+                npc.GetComponent<CreatureOxygen>().isInsideBubble = true;
             }
             else
             {
-                isInsideBubble = false;
+                npc.GetComponent<CreatureOxygen>().isInsideBubble = false;
             }
         }
     }

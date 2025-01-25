@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CreatureOxygen : MonoBehaviour
@@ -11,7 +12,11 @@ public class CreatureOxygen : MonoBehaviour
     public float changeRatePerSecond;
     public float MaxLevels = 50;
     [SerializeField] private float levels;
+    public bool isInsideBubble = false;
     public bool isHoldingOnNpc = false;
+    public NPCLogic npcLogic;
+
+    public bool isPlayer = false;
     public float Levels
     {
         get { return levels; }
@@ -44,6 +49,13 @@ public class CreatureOxygen : MonoBehaviour
         Levels = MaxLevels;
     }
 
+    private void Start()
+    {
+        isHoldingOnNpc = false;
+        if (!isPlayer)
+        npcLogic.InsideBubble(this.gameObject);
+    }
+
     public void SetChangeRateToDefault()
     {
         changeRatePerSecond = changeRatePerSecondDefualt;
@@ -57,5 +69,14 @@ public class CreatureOxygen : MonoBehaviour
     void Update()
     {
         Levels += changeRatePerSecond * Time.deltaTime;
+
+        if (this.isInsideBubble && !isPlayer)
+        {
+            if (this.gameObject != null)
+            {
+                Debug.Log(this.gameObject.name);
+                npcLogic.InsideBubble(this.gameObject);
+            }
+        }
     }
 }

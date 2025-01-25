@@ -19,7 +19,7 @@ public class BubbleLogic : MonoBehaviour
 
     public float oxygenBoostRate = 0.5f;
 
-    [SerializeField] private bool canShrink = true; // New variable to control shrinking
+    [SerializeField] private bool canShrink = true; 
 
     private void Start()
     {
@@ -58,7 +58,7 @@ public class BubbleLogic : MonoBehaviour
                     npcOxygen.Levels += oxygenBoostRate;
                 }
 
-                if (canShrink) // Check if shrinking is allowed
+                if (canShrink) 
                 {
                     oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime * npcs.Count;
                     transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
@@ -66,7 +66,7 @@ public class BubbleLogic : MonoBehaviour
             }
             else
             {
-                if (canShrink) // Check if shrinking is allowed
+                if (canShrink) 
                 {
                     oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
                     transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
