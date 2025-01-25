@@ -77,7 +77,6 @@ public class CreatureOxygen : MonoBehaviour
     void Update()
     {
         Levels += changeRatePerSecond * Time.deltaTime;
-        Debug.Log(levels.ToString());
 
         if (this.isInsideBubble && !isPlayer)
         {
