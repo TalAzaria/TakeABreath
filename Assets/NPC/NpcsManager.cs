@@ -11,6 +11,7 @@ public class NpcsManager : MonoBehaviour
     public List<NPCVisual> NPCVisuals = new List<NPCVisual>();
     public List<int> RescuedNPCCounters = new List<int>();
     public List<int> DeadNPCCounters = new List<int>();
+    private int NpcRescudedLeft = 0;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class NpcsManager : MonoBehaviour
     private void Start()
     {
         npcOxygenList = GetComponentsInChildren<CreatureOxygen>().ToList();
+        NpcRescudedLeft = npcOxygenList.Count;
         foreach (CreatureOxygen creature in npcOxygenList)
         {
             creature.OnDepleted += OnCreatureOxygenDepleted;
@@ -52,6 +54,16 @@ public class NpcsManager : MonoBehaviour
         NPCVisual npcVisual = npc.GetComponent<NPCVisual>();
         npcVisual.IsRescued = true;
         RescuedNPCCounters[(int)(npcVisual.NPCType)]++;
+        NpcRescudedLeft--;
+        if (NpcRescudedLeft < 1)
+        {
+            OnGameWon();
+        }
+    }
+
+    public void OnGameWon()
+    {
+        Debug.unityLogger.Log("Game won");
     }
 
 
@@ -62,7 +74,15 @@ public class NpcsManager : MonoBehaviour
         {
             if (!NPCVisuals[i].IsRescued && NPCVisuals[i].IsAlive)
             {
-                OnCreatureOxygenDepleted(NPCVisuals[i].gameObject);
+
+                NPCVisuals[i].GetComponent<CapsuleCollider2D>().enabled = false;
+                CreatureOxygen creature = NPCVisuals[i].GetComponent<CreatureOxygen>();
+                creature.bubblesParticles.Stop();
+                npcOxygenList.Remove(creature);
+
+                NPCVisual npcVisual = NPCVisuals[i].GetComponent<NPCVisual>();
+                npcVisual.IsAlive = false;
+                DeadNPCCounters[(int)(npcVisual.NPCType)]++;
             }
 
         }
