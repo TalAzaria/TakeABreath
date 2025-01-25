@@ -19,12 +19,16 @@ public class BubbleLogic : MonoBehaviour
 
     public float oxygenBoostRate = 0.5f;
 
-    [SerializeField] private bool canShrink = true; 
+    [SerializeField] private bool canShrink = true;
+
+    private void Awake()
+    {
+        originalScale = this.transform.localScale;
+    }
 
     private void Start()
     {
         oxygenInsideBubble = startingOxygen;
-        originalScale = transform.localScale;
 
         playerOxygen = Player.GetComponent<CreatureOxygen>();
     }
@@ -99,8 +103,9 @@ public class BubbleLogic : MonoBehaviour
         }
     }
 
-    public void npcIsInsideLogic(CreatureOxygen npcOxygen)
+    public void npcIsInsideLogic(GameObject npc)
     {
+        CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
         if (npcOxygen.isHoldingOnNpc == false)
         {
             npcOxygen.changeRatePerSecond = 0;
