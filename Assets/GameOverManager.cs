@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,23 +20,29 @@ public class GameOverManager : MonoBehaviour
     private float wibbleDuration = 0.1f;
     private float wibbleSpeed = 2f;
 
+    public CinemachineCamera m_OrthographicCamera;
+    public float cameraZoomDuration = 1f;
+    public float cameraStartSize = 8f;
+    public float cameraEndSize = 14f;
+
     private void Start()
     {
+        m_OrthographicCamera.Lens.OrthographicSize = cameraStartSize;
         // Time.timeScale = 0;
         playerMovement = this.GetComponent<PlayerMovement>();
-        //playerMovement.enabled = false;
+        playerMovement.enabled = false;
 
         collisionCollider = this.GetComponent<CapsuleCollider2D>();
-        //collisionCollider.enabled = false;
+        collisionCollider.enabled = false;
 
-    //    originalPosition = spawnPoint.transform.position;
-     //   this.transform.position = originalPosition;
+        originalPosition = spawnPoint.transform.position;
+        this.transform.position = originalPosition;
 
-     //   StartCoroutine(WibbleAndMoveDownEffect());
+        StartCoroutine(WibbleAndMoveDownEffect());
 
         playerOxygen.OnDepleted += OnPlayerOxygenDepleted;
 
-       // UI.enabled = false;
+        UI.enabled = false;
     }
 
     void StartGame()
@@ -76,7 +83,7 @@ public class GameOverManager : MonoBehaviour
     IEnumerator WibbleAndMoveDownEffect()
     {
         float elapsedTime = 0f;
-        float moveDuration = 2f;
+        float moveDuration = 1.4f;
         Vector2 targetPosition = originalPosition - new Vector2(0, 5);
 
         while (elapsedTime < moveDuration)
@@ -89,7 +96,23 @@ public class GameOverManager : MonoBehaviour
             yield return null;
         }
 
+        StartCoroutine(ChangeOrthographicSize());
+
         transform.position = targetPosition;
+    }
+
+    IEnumerator ChangeOrthographicSize()
+    {
+        float timeElapsed = 0f;
+
+        while (timeElapsed < cameraZoomDuration)
+        {
+            m_OrthographicCamera.Lens.OrthographicSize = Mathf.Lerp(cameraStartSize, cameraEndSize, timeElapsed / cameraZoomDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        m_OrthographicCamera.Lens.OrthographicSize = cameraEndSize;
         StartGame();
     }
 }

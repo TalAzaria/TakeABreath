@@ -2387,6 +2387,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2803764502278466808, guid: d9e078a6f0c2f02459842545aa91ba2d, type: 3}
   m_PrefabInstance: {fileID: 528041755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &536476026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536476027}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536476027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536476026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.119379, y: 9.04, z: -0.53251094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543397974
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,6 +5589,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7421640628521490674, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
   m_PrefabInstance: {fileID: 1467028817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1485100620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8415421014659579500, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
+  m_PrefabInstance: {fileID: 8801182237581200367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488727585
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,6 +5872,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582064242}
   m_CullTransparentMesh: 1
+--- !u!223 &1597425572 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 927304211504266009, guid: 7726a77f1a365884d8d0b87265897dee, type: 3}
+  m_PrefabInstance: {fileID: 453767854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1710107345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5895,6 +5942,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7421640628521490674, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
   m_PrefabInstance: {fileID: 1710107345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1726655370 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5729244196965586969, guid: c81f714d5dca4e743b5827a24c747871, type: 3}
+  m_PrefabInstance: {fileID: 8801182237581200367}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774441007
 GameObject:
@@ -11435,9 +11487,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1597425572}
+    - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1726655370}
+    - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 536476026}
+    - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
       propertyPath: playerOxygen
       value: 
       objectReference: {fileID: 1251364585}
+    - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: cinemachineCamera
+      value: 
+      objectReference: {fileID: 1485100620}
+    - target: {fileID: 1197794749271077503, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
+      propertyPath: m_OrthographicCamera
+      value: 
+      objectReference: {fileID: 1485100620}
     - target: {fileID: 1510428105687390329, guid: 5244d7f0c1dd0ba419c6e61c7716a5db, type: 3}
       propertyPath: m_SortingOrder
       value: 100
@@ -11959,3 +12031,4 @@ SceneRoots:
   - {fileID: 1371352159}
   - {fileID: 5998572895347424077}
   - {fileID: 1797157116}
+  - {fileID: 536476027}
