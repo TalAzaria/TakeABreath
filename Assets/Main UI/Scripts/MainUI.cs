@@ -33,6 +33,7 @@ public class MainUI : MonoBehaviour
 
     private void Start()
     {
+        PlayerOxygen = GameObject.FindGameObjectWithTag("Player").GetComponent<CreatureOxygen>();
         PlayerOxygen.OnChanged += ReduceOxygen;
     }
 
