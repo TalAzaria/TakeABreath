@@ -93,43 +93,48 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeDownwardSpeedBasedOnPeople(int PeopleCount)
     {
+        float speedMultiplier = 1f;
+        float downwardSpeedMultiplier = 1f;
+
         switch (PeopleCount)
         {
             case 0:
-                moveSpeed = originalMoveSpeed;
-                downwardSpeed = originalDownwardsSpeed;
+                speedMultiplier = 1f; 
+                downwardSpeedMultiplier = 1f;  
                 break;
             case 1:
-                moveSpeed = 4f;
-                downwardSpeed = 3f;
+                speedMultiplier = 0.8f;  
+                downwardSpeedMultiplier = 1.5f;  
                 break;
             case 2:
-                moveSpeed = 3f;
-                downwardSpeed = 4f;
+                speedMultiplier = 0.6f;  
+                downwardSpeedMultiplier = 2f;  
                 break;
-
             case 3:
-                moveSpeed = 2f;
-                downwardSpeed = 5f;
+                speedMultiplier = 0.45f;  
+                downwardSpeedMultiplier = 2.5f;  
                 break;
-
             default:
-                if (PeopleCount >=maxToHold )
+                if (PeopleCount >= maxToHold)
                 {
-                    moveSpeed = 1f;
-                    downwardSpeed = 6f;
-                    Debug.Log("Maximum npcs. Can't move upward");
-                    
+                    speedMultiplier = 0.35f; 
+                    downwardSpeedMultiplier = 3f;  
+                    Debug.Log("Maximum NPCs. Can't move upward");
                 }
                 else
                 {
                     Debug.Log($"There are {PeopleCount} players.");
-                    moveSpeed = originalMoveSpeed; 
-                    downwardSpeed = originalDownwardsSpeed;
+                    speedMultiplier = 1f;  // Default to original speed
+                    downwardSpeedMultiplier = 1f;  // Default downward speed
                 }
                 break;
         }
+
+        // Apply the multiplier to the move and downward speed
+        moveSpeed = originalMoveSpeed * speedMultiplier;
+        downwardSpeed = originalDownwardsSpeed * downwardSpeedMultiplier;
     }
+
 
     public void OnCollectedChange(int CountPeople)
     {
