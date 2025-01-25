@@ -9,6 +9,7 @@ public class NPCLogic : MonoBehaviour
     public static NPCLogic Instance;
     public Action<int> OnReachSurfaceWithNpc;
     private Transform playerTransform;
+    public GameObject pressSpaceToDrop;
 
     public List<GameObject> npcs = new List<GameObject>();
 
@@ -64,6 +65,12 @@ public class NPCLogic : MonoBehaviour
             DropOneNPC();
         }
 
+        if (npcs.Count == 0)
+        {
+            pressSpaceToDrop.SetActive(false);
+
+        }
+
         for (int i = 0; i < npcs.Count; i++)
         {
             GameObject npc = npcs[i];
@@ -92,6 +99,8 @@ public class NPCLogic : MonoBehaviour
                 isDelay = true;
                 StartCoroutine(EnableTakingMorePlayersAfterDelay());
                 ResizeColliderToFitNPCs();
+
+                pressSpaceToDrop.SetActive(true);
             }
         }
     }
