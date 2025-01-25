@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: -4790628243086358353, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
   - {fileID: 8754195195242543918, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
   - {fileID: 8814806026236449208, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
-  - {fileID: -8691270262323600977, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
+  - {fileID: -9199296229237407899, guid: 69159d6dcb562e549a512b1567b5a889, type: 3}
   DeadSprite: {fileID: 0}
   SwapInterval: 0.25
   IsRescued: 0

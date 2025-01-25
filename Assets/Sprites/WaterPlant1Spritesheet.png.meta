@@ -134,10 +134,10 @@ TextureImporter:
       name: WaterPlant1Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 20
-        width: 382
-        height: 473
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: WaterPlant1Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 509
-        y: 20
-        width: 447
-        height: 472
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: WaterPlant1Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1021
-        y: 20
-        width: 439
-        height: 471
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: WaterPlant1Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 485
-        width: 9
-        height: 7
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,77 +218,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: WaterPlant1Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1533
-        y: 20
-        width: 515
-        height: 475
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa12947aeb7626780800000000000000
-      internalID: -8691270262323600977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant1Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 413
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49e1e4e831c6db560800000000000000
-      internalID: 7331134599676698260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterPlant1Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 407
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cea298c577ce16c90800000000000000
-      internalID: -7178196333654103316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 405d294e7b7aa9940a7f50bafb597bde
     internalID: 0
     vertices: []
     indices: 
@@ -302,9 +236,6 @@ TextureImporter:
       WaterPlant1Spritesheet_1: 8754195195242543918
       WaterPlant1Spritesheet_2: 8814806026236449208
       WaterPlant1Spritesheet_3: -9199296229237407899
-      WaterPlant1Spritesheet_4: -8691270262323600977
-      WaterPlant1Spritesheet_5: 7331134599676698260
-      WaterPlant1Spritesheet_6: -7178196333654103316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
