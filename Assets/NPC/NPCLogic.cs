@@ -233,6 +233,7 @@ public class NPCLogic : MonoBehaviour
             else
             {
                 npc.GetComponent<CreatureOxygen>().isInsideBubble = false;
+                npc.GetComponent<CreatureOxygen>().SetChangeRateToDefault();
             }
         }
     }
