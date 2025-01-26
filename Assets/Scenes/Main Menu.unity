@@ -17636,6 +17636,7 @@ MonoBehaviour:
   DeadSprite: {fileID: -8813087273381113915, guid: aec8f22db9e32354faf98a5d1996e093, type: 3}
   SwapInterval: 0.25
   IsRescued: 0
+  isAlive: 1
 --- !u!224 &8679374307224518385
 RectTransform:
   m_ObjectHideFlags: 0
