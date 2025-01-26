@@ -31,7 +31,7 @@ public class NPCVisual : MonoBehaviour
     [HideInInspector] public bool IsRescued = false;
 
 
-    bool isAlive = true;
+    [SerializeField] bool isAlive = true;
     public bool IsAlive
     {
         get

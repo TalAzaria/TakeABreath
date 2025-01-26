@@ -13,6 +13,7 @@ public class NPCLogic : MonoBehaviour
     public GameObject pressSpaceToDrop;
     public AudioSource MyAudioSource;
 
+
     public List<GameObject> npcs = new List<GameObject>();
 
     private Transform[] npcSlots;
@@ -122,7 +123,7 @@ public class NPCLogic : MonoBehaviour
         GameObject npcToDrop = npcs[npcs.Count - 1];
         Transform npcSlot = npcSlots[npcs.Count - 1];
         npcToDrop.transform.SetParent(null);
-        npcToDrop.transform.position = transform.position + Vector3.down * 1.3f;;
+        npcToDrop.transform.position = transform.position + Vector3.right * 1.3f;;
         //npcToDrop.transform.position = npcSlot.position + Vector3.down * 1.3f;
 
         Collider2D npcCollider = npcToDrop.GetComponent<Collider2D>();

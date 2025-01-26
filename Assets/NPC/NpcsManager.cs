@@ -51,7 +51,7 @@ public class NpcsManager : MonoBehaviour
         int counter = 0;
         foreach (NPCVisual npc1 in NPCVisuals)
         {
-            if (npc1.IsAlive)
+            if (npc1.IsAlive && !npc1.IsRescued)
             {
                 counter++;
             }
@@ -67,10 +67,21 @@ public class NpcsManager : MonoBehaviour
         npcVisual.IsRescued = true;
         RescuedNPCCounters[(int)(npcVisual.NPCType)]++;
         NpcRescudedLeft--;
-        if (NpcRescudedLeft < 1)
+        if (NpcRescudedLeft < 1 )
         {
             OnGameWon();
         }
+
+        int counter = 0;
+        foreach (NPCVisual npc1 in NPCVisuals)
+        {
+            if (npc1.IsAlive && !npc1.IsRescued)
+            {
+                counter++;
+            }
+        }
+        if (counter == 0)
+            gameOverManager?.EndGame();
     }
 
     public void OnGameWon()

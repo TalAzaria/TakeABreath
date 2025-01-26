@@ -13,6 +13,7 @@ public class BubbleLogic : MonoBehaviour
     public float scalingDown = 5f;
     public float shrinkAmount = 0.05f;
     private Vector2 originalScale;
+    public AudioSource oxygenReffil;
 
     public GameObject Player;
     CreatureOxygen playerOxygen;
@@ -36,8 +37,15 @@ public class BubbleLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && BubbleAnimator)
-            BubbleAnimator.SetBool("IsScaling", true);
+        if (collision.CompareTag("Player"))
+        {
+            if (BubbleAnimator) { 
+                BubbleAnimator.SetBool("IsScaling", true);
+        }
+            if(oxygenReffil.time == 0)
+            oxygenReffil.Play();
+
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -50,6 +58,7 @@ public class BubbleLogic : MonoBehaviour
             {
                 playerOxygen.changeRatePerSecond = 0;
                 playerOxygen.Levels += oxygenBoostRate;
+
             }
 
             if (npcs.Count > 0)
@@ -116,18 +125,27 @@ public class BubbleLogic : MonoBehaviour
     public void npcIsInsideLogic(GameObject npc)
     {
         CreatureOxygen npcOxygen = npc.GetComponent<CreatureOxygen>();
-        if (npcOxygen.isHoldingOnNpc == false && BubbleAnimator)
+        if (npcOxygen.isHoldingOnNpc == false)
         {
             npcOxygen.changeRatePerSecond = 0;
             npcOxygen.Levels += oxygenBoostRate;
             oxygenInsideBubble -= oxygenDepletionRate * Time.deltaTime;
             transform.localScale = (oxygenInsideBubble / startingOxygen) * originalScale;
-            BubbleAnimator.SetBool("IsScaling", true);
+            if (BubbleAnimator)
+            {
+                BubbleAnimator.SetBool("IsScaling", true);
+
+            }
 
             if (canShrink && oxygenInsideBubble <= minimumSize)
             {
                 Destroy(gameObject);
-                BubbleAnimator.SetBool("IsScaling", false);
+                if (BubbleAnimator)
+                {
+                    BubbleAnimator.SetBool("IsScaling", false);
+
+                }
+
 
             }
         }

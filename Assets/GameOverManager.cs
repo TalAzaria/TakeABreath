@@ -24,6 +24,18 @@ public class GameOverManager : MonoBehaviour
     public float cameraStartSize = 8f;
     public float cameraEndSize = 14f;
 
+    public bool isStartCutscene = false;
+
+    public BubbleLogic upperOxygen;
+
+    private void Update()
+    {
+        if (isStartCutscene)
+        {
+            upperOxygen.oxygenReffil.Stop();
+        }
+    }
+
     private void Start()
     {
         m_OrthographicCamera.Lens.OrthographicSize = cameraStartSize;
@@ -37,6 +49,7 @@ public class GameOverManager : MonoBehaviour
         originalPosition = spawnPoint.transform.position;
         this.transform.position = originalPosition;
 
+        isStartCutscene = true;
         StartCoroutine(WibbleAndMoveDownEffect());
 
         playerOxygen.OnDepleted += OnPlayerOxygenDepleted;
@@ -51,6 +64,7 @@ public class GameOverManager : MonoBehaviour
         collisionCollider.enabled = true;
         this.GetComponent<CreatureOxygen>().Levels = 100;
         UI.enabled = true;
+        isStartCutscene = false;
     }
 
     private void OnPlayerOxygenDepleted(GameObject player)
