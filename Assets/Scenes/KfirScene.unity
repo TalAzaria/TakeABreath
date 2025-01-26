@@ -1739,7 +1739,7 @@ PrefabInstance:
       objectReference: {fileID: 1426772925}
     - target: {fileID: 1365327130596005503, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: startingOxygen
-      value: 120
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 7421640628521490674, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: m_LocalScale.x
@@ -2312,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 1251364579}
     - target: {fileID: 1365327130596005503, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: startingOxygen
-      value: 120
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 7421640628521490674, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: m_LocalScale.x
@@ -4962,7 +4962,7 @@ PrefabInstance:
       objectReference: {fileID: 830184209}
     - target: {fileID: 1365327130596005503, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: startingOxygen
-      value: 150
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5138806849108749503, guid: a01dd67d9327db747a412c7a12e07372, type: 3}
       propertyPath: m_SortingOrder

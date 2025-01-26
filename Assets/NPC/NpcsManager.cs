@@ -38,6 +38,7 @@ public class NpcsManager : MonoBehaviour
     private void OnCreatureOxygenDepleted(GameObject npc)
     {
         npc.GetComponent<CapsuleCollider2D>().enabled = false;
+        npc.transform.Rotate(0, 0, 180f);
         CreatureOxygen creature = npc.GetComponent<CreatureOxygen>();
         creature.bubblesParticles.Stop();
         npcOxygenList.Remove(creature);
